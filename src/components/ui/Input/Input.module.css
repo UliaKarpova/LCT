@@ -1,0 +1,63 @@
+.input {
+  padding: 8px 16px;
+  margin: 0 0 24px;
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid #d0cfd5;
+  background: #FFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: 1px solid #000;
+    border-color: transparent;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.eyeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../../assets/images/icons/eye-off.svg');
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.inputError {
+  outline: 1px solid #f21515;
+  border-color: transparent;
+  margin-bottom: 4px;
+
+  &:focus {
+    outline: 1px solid #f21515;
+    border-color: transparent;
+  }
+}
+
+.errorMessage {
+  display: inline-block;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #f21515;
+}
+
+.disabled {
+  background-color: #e0e5e8;
+  pointer-events: none;
+}

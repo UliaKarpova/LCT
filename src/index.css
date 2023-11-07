@@ -35,14 +35,7 @@ select {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  max-width: 432px;
   height: 100vh;
   margin: 0 auto;
   padding: 16px;
-}
-
-@media (min-width: 500px) {
-  .app {
-    margin-top: 120px;
-  }
 }

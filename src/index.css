@@ -1,23 +1,19 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   height: 100vh;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding: 0 40px;
-  background-color: #EEEFF1;
   color: #000;
 }
 
@@ -36,14 +32,19 @@ select {
 }
 
 .app {
-  width: 800px;
-  height: 800px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  width: 100vw;
+  max-width: 432px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 16px;
 }
 
-.App-map-container {
-  height: 500px;
-  width: 500px;
+
+@media (min-width: 500px) {
+  .app {
+    margin-top: 120px;
+  }
 }
+

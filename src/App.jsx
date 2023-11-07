@@ -1,15 +1,16 @@
 import { useState } from 'react'
-import Mapgl from "./components/MapGl/Mapgl.jsx";
-import {MapglContextProvider} from "./components/MapGl/MapglContext.jsx";
+import Auth from './components/Auth/Auth'
+import WorkersList from './components/WorkersList/WorkersList'
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
   return (
-      <MapglContextProvider>
-          <div className='App-map-container'>
-            <Mapgl />
-          </div>
-      </MapglContextProvider>
-  );
+    <main className='app'>
+      {/* {!isLoggedIn && <Auth />} */}
+      <WorkersList />
+    </main>
+  )
 }
 
 export default App

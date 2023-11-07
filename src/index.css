@@ -36,8 +36,14 @@ select {
 }
 
 .app {
-  width: 400px;
+  width: 800px;
+  height: 800px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.App-map-container {
+  height: 500px;
+  width: 500px;
 }

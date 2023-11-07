@@ -1,17 +1,15 @@
 import { useState } from 'react'
-import Button from "./components/ui/Button/Button.jsx";
-import Input from "./components/ui/Input/Input.jsx";
-import Map from "./components/Map/Map.jsx";
-import {VKMap} from "./components/VKMap/VKMap.jsx";
+import Mapgl from "./components/MapGl/Mapgl.jsx";
+import {MapglContextProvider} from "./components/MapGl/MapglContext.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <main className='app'>
-      <Map center={[45.044942, 38.977131]}/>
-    </main>
-  )
+      <MapglContextProvider>
+          <div className='App-map-container'>
+            <Mapgl />
+          </div>
+      </MapglContextProvider>
+  );
 }
 
 export default App

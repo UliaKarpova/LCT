@@ -1,7 +1,6 @@
-import logo from '../../images/logo.png'
-import allert from '../../images/allert.svg'
-import Button from "../ui/Button/Button.jsx";
-import Input from "../ui/Input/Input.jsx";
+import search from '../../images/search.svg'
+import plus from '../../images/plus.svg'
+
 import ManagerHeader from '../ManagerHeader/ManagerHeader';
 import './WorkersList.css'
 
@@ -9,6 +8,23 @@ function WorkersList() {
   return (
     <>
       <ManagerHeader />
+      <main class='workers'>
+
+        <h2 class='workers_title'>Мои сотрудники</h2>
+        <div class='panel'>
+          <input className='panel_finder' placeholder='Поиск по сотрудникам' />
+          <img src={search} alt='Лупа' className='finder_img' />
+          <select className='grade_select'>
+            <option className='grade placeholder' value selected>Грейд</option>
+            <option className='grade' value='1'>Синьор</option>
+            <option className='grade' value='2'>Мидл</option>
+            <option className='grade' value='3'>Джун</option>
+          </select>
+          <button type='button' className='panel_add_worker_btn'>
+            <img src={plus} className='plus' />Добавить сотрудника</button>
+        </div>
+      </main>
+
       {/* <img class='logo'
         src={logo}
         alt='Логотип Совкомбанка' />

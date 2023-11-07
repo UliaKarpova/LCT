@@ -6,7 +6,7 @@ import './Auth.css'
 
 function Auth() {
   return (
-    <>
+    <div class='auth'>
       <img class='logo'
         src={logo}
         alt='Логотип Совкомбанка' />
@@ -26,7 +26,7 @@ function Auth() {
 
       </form>
 
-    </>
+    </div>
   )
 }
 

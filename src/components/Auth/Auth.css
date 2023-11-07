@@ -85,8 +85,15 @@
   background: #FF4B5F;
   margin-top: auto;
 } */
+.auth {
+  max-width: 432px;
+}
 
 @media (min-width: 500px) {
+  .auth {
+    margin-top: 120px;
+  }
+
   .logo {
     width: 200px;
     height: 40px;

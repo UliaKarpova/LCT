@@ -1,0 +1,31 @@
+.popup {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    background: #FFF;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    background-color: rgba(11, 15, 20, 0.45);
+    position: fixed;
+}
+
+.title {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 590;
+    line-height: 100%; /* 28px */
+    letter-spacing: -0.28px;
+    margin-bottom: 8px;
+}

@@ -10,9 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@2gis/mapgl": "^1.41.0",
+    "@2gis/mapgl-clusterer": "^2.5.0",
+    "@2gis/mapgl-directions": "^2.0.2",
+    "@2gis/mapgl-ruler": "^2.0.6",
+    "@pbe/react-yandex-maps": "^1.2.5",
     "classnames": "^2.3.2",
+    "mmr-gl": "^0.1.372",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.48.2",
+    "react-router-dom": "^6.18.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

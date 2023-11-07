@@ -1,11 +1,11 @@
 .input {
   padding: 8px 16px;
-  margin: 0 0 16px;
+  margin: 0 0 28px;
   width: 100%;
   height: 56px;
   border-radius: 10px;
-  border: 1px solid var(--border-neutral-200, #D5D8DD);
-  background: var(--background-white, #FFF);
+  border: 1px solid  #D5D8DD;
+  background: #FFF;
   cursor: pointer;
   font-size: 16px;
   font-style: normal;
@@ -20,7 +20,7 @@
 }
 
 .input::placeholder {
-  color: var(--text-tertiary, #697481);
+  color: #697481;
   font-family: Inter, sans-serif;
   font-size: 16px;
   font-style: normal;

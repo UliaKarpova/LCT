@@ -1,20 +1,26 @@
 import search from '../../images/search.svg'
 import plus from '../../images/plus.svg'
+import face1 from '../../images/face1.png'
+import face2 from '../../images/face2.png'
+import face3 from '../../images/face3.png'
 
 import ManagerHeader from '../ManagerHeader/ManagerHeader';
+import WorkersItem from '../WorkersItem/WorkersItem';
 import './WorkersList.css'
+import users from '../../data/lct.users.json'
 
 function WorkersList() {
+
   return (
     <>
       <ManagerHeader />
-      <main class='workers'>
+      <main className='workers'>
 
-        <h2 class='workers_title'>Мои сотрудники</h2>
-        <div class='panel'>
-          <input className='panel_finder' placeholder='Поиск по сотрудникам' />
+        <h2 className='workers_title'>Мои сотрудники</h2>
+        <div className='panel'>
+          <input disabled className='panel_finder' placeholder='Поиск по сотрудникам' />
           <img src={search} alt='Лупа' className='finder_img' />
-          <select className='grade_select'>
+          <select disabled className='grade_select'>
             <option className='grade placeholder' value selected>Грейд</option>
             <option className='grade' value='1'>Синьор</option>
             <option className='grade' value='2'>Мидл</option>
@@ -23,27 +29,16 @@ function WorkersList() {
           <button type='button' className='panel_add_worker_btn'>
             <img src={plus} className='plus' />Добавить сотрудника</button>
         </div>
+        <ul className='workers_list'>
+          {users.map((user, index) => {
+            user.avatar = index === 0 || index === 3 || index === 6 ? face1 
+              : index === 1 || index === 4 || index === 7 ? face2  
+              : face3;
+            return <li key={user._id}><WorkersItem user={user} /></li>
+          })}
+        </ul>
+
       </main>
-
-      {/* <img class='logo'
-        src={logo}
-        alt='Логотип Совкомбанка' />
-      <h1 class='title'>Авторизация</h1>
-      <form class='form'>
-        <Input style={{ with: '100%' }} placeholder='Логин' />
-        <Input placeholder='Пароль' forPassword />
-        <div class='warning'>
-          <img class='warning_img'
-            src={allert}
-            alt='Восклицательный знак' />
-          <span class='warning_text'>
-            Для регистрации в приложении<br />обратитесь к менеджеру
-          </span>
-        </div>
-        <Button style={{marginTop: 'auto'}}>Войти</Button>
-
-      </form> */}
-
     </>
   )
 }

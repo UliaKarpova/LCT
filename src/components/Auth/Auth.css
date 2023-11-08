@@ -87,13 +87,22 @@
 } */
 .auth {
   max-width: 432px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+.bottom {
+  margin-top: auto;
 }
 
 @media (min-width: 500px) {
   .auth {
     margin-top: 120px;
   }
-
+  .bottom {
+    margin-top: 24px;
+   }
   .logo {
     width: 200px;
     height: 40px;

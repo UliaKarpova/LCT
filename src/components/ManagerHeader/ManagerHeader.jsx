@@ -5,22 +5,22 @@ import './ManagerHeader.css'
 
 function ManagerHeader() {
   return (
-    <header class='header'>
-      <img class='header_logo'
+    <header className='header'>
+      <img className='header_logo'
         src={logo}
         alt='Логотип Совкомбанка' />
-      <menu class="menu">
-        <Link to='monitoring' class='menu_link'>Мониторинг</Link>
-        <Link to='departments' class='menu_link'>Отделения и партнёры</Link>
-        <Link to='workers' class='menu_link active'>Сотрудники</Link>
+      <menu className="menu">
+        <Link to='monitoring' className='menu_link'>Мониторинг</Link>
+        <Link to='departments' className='menu_link'>Отделения и партнёры</Link>
+        <Link to='workers' className='menu_link active'>Сотрудники</Link>
       </menu>
-      <div class='user'>
-        <img class='user_avatar' src={avatar} alt='Аватар пользователя' />
-        <div class='user_info'>
-          <h4 class='user_name'>Александр Новиков</h4>
-          <span class='user_role'>Менеджер</span>
+      <div className='user'>
+        <img className='user_avatar' src={avatar} alt='Аватар пользователя' />
+        <div className='user_info'>
+          <h4 className='user_name'>Александр Новиков</h4>
+          <span className='user_role'>Менеджер</span>
         </div>
-        <button class='more' type='button'></button>
+        <button className='more' type='button'></button>
       </div>
 
 

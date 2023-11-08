@@ -5,7 +5,6 @@ import { Clusterer } from '@2gis/mapgl-clusterer';
 import { RulerControl } from '@2gis/mapgl-ruler';
 import { Directions } from '@2gis/mapgl-directions';
 import { MapWrapper } from './MapWrapper.jsx';
-import icon from '../../assets/images/icons/placeholder.png'
 
 export const MAP_CENTER = [55.753544, 37.621202];
 

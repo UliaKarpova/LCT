@@ -1,0 +1,68 @@
+.card {
+    width: 100%;
+    border-radius: 12px;
+    border-bottom: 1px solid #E6E8EA;
+    background: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 3px 15px 0 rgba(11, 15, 20, 0.12);
+}
+
+.info {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%;
+    gap: 8px;
+    padding: 12px;
+    border-bottom: 1px solid #E6E8EA;
+}
+
+.rightArrow {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    align-self: start;
+}
+
+.location {
+    margin-top: 8px;
+    display: flex;
+    gap: 4px;
+}
+
+.address {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.statuses {
+    display: flex;
+    justify-content: space-between;
+}
+
+.priority {
+    display: flex;
+    gap: 4px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.high * {
+    fill: #F04256;
+    color: #F04256;
+}
+
+.medium * {
+    fill: #D74D00;
+    color: #D74D00;
+}
+
+.low * {
+    fill: #5AA300;
+    color: #5AA300;
+}

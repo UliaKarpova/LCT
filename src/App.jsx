@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react'
 import Auth from './components/Auth/Auth'
 import WorkersList from './components/WorkersList/WorkersList'
-import DayRoute from "./Pages/DayRoute/DayRoute.jsx";
+import WorkerProfile from "./Pages/WorkerProfile/WorkerProfile.jsx";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Auth />} />
           <Route path="manager" element={<WorkersList />} />
-            <Route path="worker/route" element={<DayRoute />} />
+            <Route path="worker" element={<WorkerProfile />} />
         </Routes>
       </main>
     </BrowserRouter>

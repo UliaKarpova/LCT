@@ -10,24 +10,23 @@ function Auth() {
     const [isPopupVivible, setIsPopupVisible] =useState(false)
 
   return (
-    <div class='auth'>
-      <img class='logo'
+    <div className='auth'>
+      <img className='logo'
         src={logo}
         alt='Логотип Совкомбанка' />
-      <h1 class='title'>Авторизация</h1>
-      <form class='form'>
+      <h1 className='title'>Авторизация</h1>
+      <form className='form'>
         <Input style={{ with: '100%' }} placeholder='Логин' />
         <Input placeholder='Пароль' forPassword />
-        <div class='warning'>
-          <img class='warning_img'
+        <div className='warning'>
+          <img className='warning_img'
             src={allert}
             alt='Восклицательный знак' />
-          <span class='warning_text'>
+          <span className='warning_text'>
             Для регистрации в приложении<br />обратитесь к менеджеру
           </span>
         </div>
-        <Button style={{marginTop: 'auto'}} onClick={() => setIsPopupVisible(true)}>Войти</Button>
-          {isPopupVivible && <CreateUserPopup closeModal={() => setIsPopupVisible(false)}/>}
+        <Button className='bottom'>Войти</Button>
       </form>
 
     </div>

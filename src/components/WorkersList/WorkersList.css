@@ -83,6 +83,12 @@
   font-weight: 500;
   line-height: 100%;
   /* 16px */
+  cursor: pointer;
+}
+
+.workers_list {
+  list-style: none;
+  margin-bottom: 64px;
 }
 
 .plus {

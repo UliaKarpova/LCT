@@ -1,0 +1,492 @@
+[{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab374"
+  },
+  "number": 1,
+  "address": "ул. Ставропольская, д. 140",
+  "isOld": false,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 0,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab375"
+  },
+  "number": 2,
+  "address": "ул. им. Максима Горького, д. 128",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 3,
+  "applicationsNumber": 15,
+  "issuedСardsNumber": 3
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab376"
+  },
+  "number": 3,
+  "address": "ул. им. Дзержинского, д. 100",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 3,
+  "applicationsNumber": 9,
+  "issuedСardsNumber": 1
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab377"
+  },
+  "number": 4,
+  "address": "ул. Красноармейская, д. 126",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 0,
+  "applicationsNumber": 38,
+  "issuedСardsNumber": 23
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab378"
+  },
+  "number": 5,
+  "address": "х. Ленина, п/о. 37",
+  "isOld": true,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 14,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab379"
+  },
+  "number": 6,
+  "address": "тер. Пашковский жилой массив, ул. Крылатая, д. 2",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 12,
+  "applicationsNumber": 19,
+  "issuedСardsNumber": 1
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab37a"
+  },
+  "number": 7,
+  "address": "ул. Восточно-Кругликовская, д. 64/2",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 27,
+  "applicationsNumber": 19,
+  "issuedСardsNumber": 12
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab37b"
+  },
+  "number": 8,
+  "address": "ул. Красных Партизан, д. 439",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 33,
+  "applicationsNumber": 84,
+  "issuedСardsNumber": 63
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab37c"
+  },
+  "number": 9,
+  "address": "ул. Таманская, д. 153 к. 3, кв. 2",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 2,
+  "applicationsNumber": 15,
+  "issuedСardsNumber": 1
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab37d"
+  },
+  "number": 10,
+  "address": "ул. им. Дзержинского, д. 165",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 0,
+  "applicationsNumber": 19,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab37e"
+  },
+  "number": 11,
+  "address": "ст-ца. Елизаветинская, ул. Широкая, д. 260",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 15,
+  "applicationsNumber": 29,
+  "issuedСardsNumber": 15
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab37f"
+  },
+  "number": 12,
+  "address": "ул. им. Тургенева, д. 174, 1 этаж",
+  "isOld": false,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 0,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab380"
+  },
+  "number": 13,
+  "address": "ул. Уральская, д. 162",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 4,
+  "applicationsNumber": 21,
+  "issuedСardsNumber": 5
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab381"
+  },
+  "number": 14,
+  "address": "ул. Уральская, д. 79/1",
+  "isOld": false,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 5,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab382"
+  },
+  "number": 15,
+  "address": "ул. им. Селезнева, д. 197/5",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 7,
+  "applicationsNumber": 14,
+  "issuedСardsNumber": 3
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab383"
+  },
+  "number": 16,
+  "address": "ул. Уральская, д. 117",
+  "isOld": false,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 0,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab386"
+  },
+  "number": 19,
+  "address": "ул. Зиповская, д. 1",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 6,
+  "applicationsNumber": 32,
+  "issuedСardsNumber": 9
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab387"
+  },
+  "number": 20,
+  "address": "ул. им. 40-летия Победы, д. 20/1",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 4,
+  "applicationsNumber": 35,
+  "issuedСardsNumber": 15
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab388"
+  },
+  "number": 21,
+  "address": "ул. им. Атарбекова, д. 24",
+  "isOld": false,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 6,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab389"
+  },
+  "number": 22,
+  "address": "ул. им. Героя Аверкиева А.А., д. 8",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 6,
+  "applicationsNumber": 18,
+  "issuedСardsNumber": 6
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab38a"
+  },
+  "number": 23,
+  "address": "ул. им. Героя Аверкиева А.А., д. 8/1 к. мая, кв. 268",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 0,
+  "applicationsNumber": 15,
+  "issuedСardsNumber": 5
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab38b"
+  },
+  "number": 24,
+  "address": "ул. им. Тургенева, д. 106",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 2,
+  "applicationsNumber": 96,
+  "issuedСardsNumber": 20
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab38c"
+  },
+  "number": 25,
+  "address": "ул. Красных Партизан, д. 117",
+  "isOld": false,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 0,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab38d"
+  },
+  "number": 26,
+  "address": "ул. Северная, д. 389",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 0,
+  "applicationsNumber": 16,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab38e"
+  },
+  "number": 27,
+  "address": "ул. Уральская, д. 166/3",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 3,
+  "applicationsNumber": 43,
+  "issuedСardsNumber": 29
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab38f"
+  },
+  "number": 28,
+  "address": "ул. Северная, д. 524",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 3,
+  "applicationsNumber": 13,
+  "issuedСardsNumber": 4
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab390"
+  },
+  "number": 29,
+  "address": "ул. им. Кирилла Россинского, д. 61/1",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 6,
+  "applicationsNumber": 19,
+  "issuedСardsNumber": 5
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab391"
+  },
+  "number": 30,
+  "address": "ул. Коммунаров, д. 258",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 16,
+  "applicationsNumber": 45,
+  "issuedСardsNumber": 30
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab392"
+  },
+  "number": 31,
+  "address": "ул. им. Дзержинского, д. 100",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 1,
+  "applicationsNumber": 19,
+  "issuedСardsNumber": 4
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab393"
+  },
+  "number": 32,
+  "address": "ул. Северная, д. 326",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 3,
+  "applicationsNumber": 20,
+  "issuedСardsNumber": 9
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab394"
+  },
+  "number": 33,
+  "address": "ул. им. 40-летия Победы, д. 34",
+  "isOld": false,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 19,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab395"
+  },
+  "number": 34,
+  "address": "ул. Красная, д. 176",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 76,
+  "applicationsNumber": 82,
+  "issuedСardsNumber": 72
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab396"
+  },
+  "number": 35,
+  "address": "ул. Уральская, д. 79/1",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 23,
+  "applicationsNumber": 32,
+  "issuedСardsNumber": 21
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab397"
+  },
+  "number": 36,
+  "address": "ул. Северная, д. 326",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 4,
+  "applicationsNumber": 19,
+  "issuedСardsNumber": 4
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab398"
+  },
+  "number": 37,
+  "address": "ул. Красная, д. 149",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 9,
+  "applicationsNumber": 10,
+  "issuedСardsNumber": 7
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab399"
+  },
+  "number": 38,
+  "address": "п. Березовый, ул. Целиноградская, д. 6/1",
+  "isOld": false,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 13,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab39a"
+  },
+  "number": 39,
+  "address": "ул. им. Дзержинского, д. 100",
+  "isOld": false,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 10,
+  "issuedСardsNumber": 0
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab39b"
+  },
+  "number": 40,
+  "address": "ул. Российская, д. 418",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 6,
+  "applicationsNumber": 30,
+  "issuedСardsNumber": 14
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab39c"
+  },
+  "number": 41,
+  "address": "ул. им. Володи Головатого, д. 313",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 6,
+  "applicationsNumber": 65,
+  "issuedСardsNumber": 12
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab39d"
+  },
+  "number": 42,
+  "address": "ул. Красная, д. 145",
+  "isOld": true,
+  "isDelivered": true,
+  "daysCount": 3,
+  "applicationsNumber": 20,
+  "issuedСardsNumber": 4
+},
+{
+  "_id": {
+    "$oid": "65466e9da80a7a01675ab39e"
+  },
+  "number": 43,
+  "address": "ул. Красная, д. 154",
+  "isOld": false,
+  "isDelivered": false,
+  "daysCount": 0,
+  "applicationsNumber": 0,
+  "issuedСardsNumber": 0
+}]

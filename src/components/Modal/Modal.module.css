@@ -1,0 +1,41 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2);
+    width: 400px;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 20px;
+    background: #FFF;
+    padding: 24px;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 999;
+    opacity: 0;
+    animation: rising 0.5s forwards;
+}
+
+.close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+@keyframes rising {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

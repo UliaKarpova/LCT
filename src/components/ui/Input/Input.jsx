@@ -26,7 +26,7 @@ const InputField = forwardRef(
         {errorMessage && (
           <div className={styles.errorMessage}>{errorMessage}</div>
         )}
-        {forPassword && <button onClick={() => setIsInvisible(!isInvisible)} className={styles.eyeButton}></button>}
+        {forPassword && <button type='button' onClick={() => setIsInvisible(!isInvisible)} className={styles.eyeButton}></button>}
       </div>
     );
   },

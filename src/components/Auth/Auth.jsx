@@ -3,8 +3,12 @@ import allert from '../../images/allert.svg'
 import Button from "../ui/Button/Button.jsx";
 import Input from "../ui/Input/Input.jsx";
 import './Auth.css'
+import CreateUserPopup from "../CreateUserPopup/CreateUserPopup.jsx";
+import {useState} from "react";
 
 function Auth() {
+    const [isPopupVivible, setIsPopupVisible] =useState(false)
+
   return (
     <div class='auth'>
       <img class='logo'
@@ -22,8 +26,8 @@ function Auth() {
             Для регистрации в приложении<br />обратитесь к менеджеру
           </span>
         </div>
-        <Button style={{marginTop: 'auto'}}>Войти</Button>
-
+        <Button style={{marginTop: 'auto'}} onClick={() => setIsPopupVisible(true)}>Войти</Button>
+          {isPopupVivible && <CreateUserPopup closeModal={() => setIsPopupVisible(false)}/>}
       </form>
 
     </div>

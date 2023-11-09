@@ -4,10 +4,23 @@
   },
   "name": "Дерягин Никита Владимирович",
   "address": "Краснодар, Красная, д. 139",
-  "gradeIndex": 1, 
-  "tasks": [{"status": "done", "name": "Выезд на точку для стимулирования выдач", "priority": "Hight", "time": 4, "address": "ул. Коммунаров, д. 258"},
-  {"status": "processing", "name": "Обучение агента", "priority": "Medium", "time": 2, "address": "ул. Красная, д. 145"},
-   {"status": "waiting", "name": "Доставка карт и материалов", "priority": "Low", "time": 1.5, "address": "ул. им. 40-летия Победы, д. 34"}
+  "gradeIndex": 1,
+  "nativeBranch": {
+    "address": "Краснодар,Красная, 139",
+    "location": [38.977047, 45.044960]
+  },
+  "tasks": [{"status": "waiting", "name": "Выезд на точку для стимулирования выдач", "priority": "Hight", "time": 4, "branch": {
+    "address": "Краснодар, Коммунаров, 258",
+    "location": [38.981691, 45.043693]
+  }},
+  {"status": "waiting", "name": "Обучение агента", "priority": "Medium", "time": 2, "branch": {
+    "address": "Краснодар, Красная, 145",
+    "location": [38.977685, 45.046718]
+  }},
+   {"status": "waiting", "name": "Доставка карт и материалов", "priority": "Low", "time": 1.5, "branch": {
+     "address": "Краснодар, 40-летия Победы, 34",
+     "location": [39.003736, 45.054684]
+   }}
 ]
 },
 {

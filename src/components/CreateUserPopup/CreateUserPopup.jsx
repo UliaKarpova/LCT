@@ -35,7 +35,7 @@ const CreateUserPopup = ({closeModal}) => {
 
     return (
         <Modal closeModal={closeModal}>
-                <>
+                <div className={styles.container}>
                     <h2 className={styles.title}>Создать пользователя</h2>
                     <TabPanel tabs={userRole} setOption={setRole}/>
                     {role === 2 &&<TabPanel tabs={workerGrade} setOption={setGrade}/>}
@@ -67,7 +67,7 @@ const CreateUserPopup = ({closeModal}) => {
                         />
                         <Button type='submit'>Создать пользователя</Button>
                     </form>
-                </>
+                </div>
         </Modal>
 
     );

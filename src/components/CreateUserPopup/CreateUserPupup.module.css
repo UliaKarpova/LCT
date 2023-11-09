@@ -1,3 +1,15 @@
+.container {
+    width: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 20px;
+    background: #FFF;
+    padding: 24px;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .title {
     font-size: 28px;
     font-style: normal;

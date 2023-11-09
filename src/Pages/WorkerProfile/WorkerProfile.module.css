@@ -1,0 +1,48 @@
+.container {
+    min-width: 393px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-content: center;
+    padding: 0 16px 16px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.name {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+    letter-spacing: -0.2px;
+}
+
+.logo {
+    width: 24px;
+    height: 24px;
+}
+
+.title {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 590;
+    line-height: 120%; /* 33.6px */
+    letter-spacing: -0.4px;
+    margin-bottom: 16px;
+}
+
+.taskContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    list-style-type: none;
+    max-height: calc(100vh - 162px);
+    overflow: auto;
+}

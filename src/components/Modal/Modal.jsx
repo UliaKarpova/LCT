@@ -3,10 +3,11 @@ import { createPortal } from "react-dom";
 import XIcon from '../../assets/images/icons/Ellipse-close.svg?react'
 import ModalOverlay from "../ui/ModalOverlay/ModalOverlay.jsx";
 import styles from './Modal.module.css'
+import classnames from "classnames";
 
 const modalsContainer = document.querySelector("#modals");
 
-const Modal = ({ closeModal, children }) => {
+const Modal = ({ closeModal, children, leftIcon }) => {
     useEffect(() => {
         const handleEscKeydown = (event) => {
             event.key === "Escape" && closeModal();
@@ -19,6 +20,12 @@ const Modal = ({ closeModal, children }) => {
         };
     }, [closeModal]);
 
+    const iconClassname = classnames({
+        [styles.close]: true,
+        [styles.rightIcon]: !leftIcon,
+        [styles.leftIcon]: leftIcon
+    })
+
     return createPortal(
         <>
             <div className={styles.modal}>
@@ -26,7 +33,7 @@ const Modal = ({ closeModal, children }) => {
                 <button
                     type="button"
                     onClick={closeModal}
-                    className={styles.close}
+                    className={iconClassname}
                 >
                     <XIcon/>
                 </button>

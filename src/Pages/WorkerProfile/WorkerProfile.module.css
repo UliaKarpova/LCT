@@ -12,10 +12,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-.tasks {
-
+    margin-bottom: 24px;
 }
 
 .name {
@@ -37,6 +34,7 @@
     font-weight: 590;
     line-height: 120%; /* 33.6px */
     letter-spacing: -0.4px;
+    margin-bottom: 16px;
 }
 
 .taskContainer {
@@ -45,5 +43,6 @@
     justify-content: space-between;
     gap: 14px;
     list-style-type: none;
+    max-height: calc(100vh - 162px);
+    overflow: auto;
 }
-

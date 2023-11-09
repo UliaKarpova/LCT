@@ -41,28 +41,38 @@
 .statuses {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .priority {
     display: flex;
+    align-items: center;
     gap: 4px;
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
+    margin-left: 20px;
 }
 
-.high * {
+.Hight * {
     fill: #F04256;
     color: #F04256;
 }
 
-.medium * {
+.Medium * {
     fill: #D74D00;
     color: #D74D00;
 }
 
-.low * {
+.Low * {
     fill: #5AA300;
     color: #5AA300;
+}
+
+.status {
+    height: 24px;
 }

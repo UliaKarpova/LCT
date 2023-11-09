@@ -9,6 +9,8 @@ import { MapWrapper } from './MapWrapper.jsx';
 export default function Mapgl({center, points}) {
     const { setMapglContext } = useMapglContext();
 
+    console.log(points)
+
     useEffect(() => {
         let map = undefined;
         let directions = undefined;

@@ -9,15 +9,15 @@
     "address": "Краснодар,Красная, 139",
     "location": [38.977047, 45.044960]
   },
-  "tasks": [{"status": "waiting", "name": "Выезд на точку для стимулирования выдач", "priority": "Hight", "time": 4, "branch": {
+  "tasks": [{"id": 1, "status": "waiting", "name": "Выезд на точку для стимулирования выдач", "priority": "Hight", "time": 4, "branch": {
     "address": "Краснодар, Коммунаров, 258",
     "location": [38.981691, 45.043693]
   }},
-  {"status": "waiting", "name": "Обучение агента", "priority": "Medium", "time": 2, "branch": {
+  {"id": 2, "status": "waiting", "name": "Обучение агента", "priority": "Medium", "time": 2, "branch": {
     "address": "Краснодар, Красная, 145",
     "location": [38.977685, 45.046718]
   }},
-   {"status": "waiting", "name": "Доставка карт и материалов", "priority": "Low", "time": 1.5, "branch": {
+   {"id": 3, "status": "waiting", "name": "Доставка карт и материалов", "priority": "Low", "time": 1.5, "branch": {
      "address": "Краснодар, 40-летия Победы, 34",
      "location": [39.003736, 45.054684]
    }}

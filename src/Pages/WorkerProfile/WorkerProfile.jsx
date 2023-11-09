@@ -1,8 +1,6 @@
-import Mapgl from "../../components/MapGl/Mapgl.jsx";
 import styles from './WorkerProfile.module.css';
 import Logo from '../../assets/images/icons/Logo.svg?react';
 import users from '../../data/lct.users.json'
-import WorkerTask from "../../components/WorkerTask/WorkerTask.jsx";
 import TaskCard from "../../components/TaskCard/TaskCard.jsx";
 import Button from "../../components/ui/Button/Button.jsx";
 import {useContext, useEffect, useState} from "react";
@@ -15,11 +13,10 @@ const WorkerProfile = () => {
 
     useEffect(() => {
         setUser(users[0])
-        setDailyTasks(users[0].tasks)
+        if (!dailyTasks) {
+            setDailyTasks(users[0].tasks)
+        }
     });
-
-    console.log(user)
-    console.log(dailyTasks)
 
     return (
         <div className={styles.container}>
@@ -39,8 +36,9 @@ const WorkerProfile = () => {
             <Button onClick={() => setIsVisiblePopup(true)}>Посмотреть маршрут</Button>
             {isVisiblePopup && <RoutePopup
                 closeModal={() => setIsVisiblePopup(false)}
-                center={user.nativeBranch.location}
-                tasks={dailyTasks}
+                nativeBranchLocation={user.nativeBranch.location}
+                dailyTasks={dailyTasks}
+                patchDailyTasks={setDailyTasks}
             />}
         </div>
     );

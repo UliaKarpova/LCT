@@ -5,6 +5,7 @@ import Input from "../ui/Input/Input.jsx";
 import Button from "../ui/Button/Button.jsx";
 import {useForm} from "react-hook-form";
 import Modal from "../Modal/Modal.jsx";
+import api from '../../utils/api'
 
 const userRole = [
     {id: 1, title: 'Менеджер'},
@@ -30,6 +31,9 @@ const CreateUserPopup = ({closeModal}) => {
 
     const onSubmit = (data) => {
         console.log(data)
+        api.createUser(data).then((res) => {
+            console.log(res)
+        })
         reset()
     }
 

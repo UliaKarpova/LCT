@@ -28,7 +28,7 @@
   font-weight: 400;
   line-height: 18px; /* 128.571% */
 }
-.task_time {
+.task_priority {
   width: 45px;
   color: var(--text-primary, #0B0F14);
   /* font-feature-settings: 'clig' off, 'liga' off; */

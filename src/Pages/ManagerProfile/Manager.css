@@ -1,4 +1,4 @@
-.workers {
+.main {
   width: 100%;
   padding: 40px 64px 0;
   display: flex;
@@ -6,7 +6,7 @@
   max-width: 1280px;
 }
 
-.workers_title {
+.title {
   color: #000;
   /* font-feature-settings: 'clig'off, 'liga'off; */
   font-family: SF Pro, sans-serif;
@@ -56,18 +56,7 @@
   height: 20px;
 }
 
-.grade_select {
-  width: 160px;
-  height: 44px;
-  padding: 10px;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 10px;
-  border: 1px solid var(--border-neutral-200, #D5D8DD);
-  background: var(--background-white, #FFF);
-}
-
-.panel_add_worker_btn {
+.panel_add_btn {
   display: flex;
   border: none;
   height: 44px;
@@ -86,20 +75,8 @@
   cursor: pointer;
 }
 
-.workers_list {
-  list-style: none;
-  margin-bottom: 64px;
-}
-
 .plus {
   width: 20px;
   height: 20px;
   margin-right: 8px;
-}
-
-@media (min-width: 500px) {
-  .logo {
-    width: 200px;
-    height: 40px;
-  }
 }

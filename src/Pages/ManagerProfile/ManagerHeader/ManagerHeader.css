@@ -93,8 +93,8 @@
   /* 114.286% */
 }
 
-.more {
-  background-image: url(../../images/arrow.svg);
+.arrow {
+  background-image: url(../../../images/arrow.svg);
   width: 12px;
   height: 12px;
   border: none;

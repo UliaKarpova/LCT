@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react'
 import Auth from './components/Auth/Auth'
-import WorkersList from './components/WorkersList/WorkersList'
+import Manager from './Pages/ManagerProfile/Manager'
 import WorkerProfile from "./Pages/WorkerProfile/WorkerProfile.jsx";
 import {AppContext} from "./context/index.js";
 
@@ -15,7 +15,9 @@ function App() {
           <main className='app'>
             <Routes>
               <Route path="*" element={<Auth />} />
-              <Route path="manager" element={<WorkersList />} />
+              <Route path="manager/workers" element={<Manager />} />
+              <Route path="manager/departments" element={<Manager />} />
+              <Route path="manager/monitoring" element={<Manager />} />
               <Route path="worker" element={<WorkerProfile />} />
             </Routes>
           </main>

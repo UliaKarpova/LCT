@@ -6,31 +6,26 @@ import ManagerPanel from '../ManagerPanel/ManagerPanel'
 import WorkersItem from './WorkersItem/WorkersItem';
 import CreateUserPopup from '../../../components/CreateUserPopup/CreateUserPopup'
 import './WorkersList.css'
-// import users from '../../../data/lct.users.json'
 import api from '../../../utils/api'
 import { useState } from 'react';
 import { useEffect } from 'react';
+
 function WorkersList() {
   const [users, setUsers] = useState([])
   const [isPopupCreateUserOpen, setIsPopupCreateUserOpen] = useState(false)
     useEffect(() => {
     api.getEmployees().then((res) => {
       setUsers(res)
-      data = res
     })
   }, [])
-  console.log(users)
-function onAddWorker() {
-  setIsPopupCreateUserOpen(!isPopupCreateUserOpen)
-}
+
+  function onAddWorker() {
+    setIsPopupCreateUserOpen(!isPopupCreateUserOpen)
+  }
 
   return (
     <main className='main'>
       {isPopupCreateUserOpen && <CreateUserPopup closeModal={onAddWorker}/>}
-      {/* <h2 className='title'>Мои сотрудники</h2>
-      <div className='panel'>
-        <input disabled className='panel_finder' placeholder='Поиск по сотрудникам' />
-        <img src={search} alt='Лупа' className='finder_img' /> */}
         <ManagerPanel title='Мои сотрудники' 
           btnText='Добавить сотрудника' 
           placeholderText='Поиск по сотрудникам'
@@ -42,19 +37,14 @@ function onAddWorker() {
             <option className='grade' value='3'>Джун</option>
           </select>
         </ManagerPanel>
-        
-        {/* <button type='button' className='panel_add_btn'>
-          <img src={plus} className='plus' />Добавить сотрудника</button>
-      </div> */}
-      <ul className='workers_list'>
-        {users.map((user, index) => {
-          user.avatar = index === 0 || index === 3 || index === 6 ? face1
-            : index === 1 || index === 4 || index === 7 ? face2
-              : face3;
-          return <li key={user._id.$oid}><WorkersItem user={user} /></li>
-        })}
-      </ul>
-
+        <ul className='workers_list'>
+          {users.map((user, index) => {
+            user.avatar = index === 0 || index === 3 || index === 6 ? face1
+              : index === 1 || index === 4 || index === 7 ? face2
+                : face3;
+            return <li key={user._id}><WorkersItem user={user} /></li>
+          })}
+        </ul>
     </main>
   )
 }

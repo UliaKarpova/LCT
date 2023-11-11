@@ -25,9 +25,6 @@ const TaskCard = ({number, task, onClick}) => {
         [styles.priority]: true,
         [styles[task.priority]]: true
     })
-
-    console.log(task)
-
     return (
         <div className={styles.card} onClick={onClick}>
             <div className={styles.info}>

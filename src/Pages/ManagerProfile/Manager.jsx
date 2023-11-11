@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import ManagerHeader from './ManagerHeader/ManagerHeader';
 import WorkersList from './WorkersList/WorkersList'
 import Departments from './Departments/Departments';
+import Monitoring from './Monitoring/Monitoring'
 
 
 function Manager() {
@@ -15,6 +16,8 @@ function Manager() {
         return <WorkersList />;
       case "/manager/departments":
         return <Departments />;
+        case "/manager/monitoring":
+          return <Monitoring />;
       default:
         return "";
     }

@@ -1,60 +1,26 @@
 import logo from '../../images/logo.png'
 import allert from '../../images/allert.svg'
-import Button from "../../components/ui/Button/Button.jsx";
-import Input from "../../components/ui/Input/Input.jsx";
+import Button from "../../components/ui/Button/Button";
+import Input from "../../components/ui/Input/Input";
 import './Auth.css'
-import CreateUserPopup from "../../components/CreateUserPopup/CreateUserPopup.jsx";
+import CreateUserPopup from "../.../../../components/CreateUserPopup/CreateUserPopup";
 import {useState} from "react";
-import {useForm} from "react-hook-form";
 
 function Auth() {
     const [isPopupVisible, setIsPopupVisible] =useState(false)
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        reset
-    } = useForm({ mode: "onChange" });
-
-    const onSubmit = (data) => {
-        console.log(data)
-        reset()
-    }
+    console.log(isPopupVisible)
 
   return (
       <>
-          <div className='auth' onSubmit={handleSubmit(onSubmit)}>
+          <div className='auth'>
               <img className='logo'
                    src={logo}
                    alt='Логотип Совкомбанка' />
               <h1 className='title'>Авторизация</h1>
               <form className='form'>
-                  <Input
-                      placeholder='Логин'
-                      {...register("login", {
-                          required: 'Поле обязательно',
-                          minLength: {
-                              value: 3,
-                              message: 'Минимум 3 символа'
-                          }
-                      })}
-                      hasError={Boolean(errors.login)}
-                      errorMessage={errors.login?.message}
-                  />
-                  <Input
-                      placeholder='Пароль'
-                      forPassword
-                      {...register("password", {
-                          required: 'Поле обязательно',
-                          minLength: {
-                              value: 8,
-                              message: 'Минимум 8 символов'
-                          }
-                      })}
-                      hasError={Boolean(errors.password)}
-                      errorMessage={errors.password?.message}
-                  />
+                  <Input style={{ with: '100%' }} placeholder='Логин' />
+                  <Input placeholder='Пароль' forPassword />
                   <div className='warning'>
                       <img className='warning_img'
                            src={allert}

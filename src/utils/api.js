@@ -12,7 +12,7 @@ class Api {
     }
 
     getEmployees = () => {
-        return fetch(`${this._url}/employees`, {
+        return fetch(`${this._url}/employees_tasks`, {
             method: 'GET'
             // headers: this._headers
         }).then(res => {
@@ -22,6 +22,23 @@ class Api {
 
     getOffices = () => {
         return fetch(`${this._url}/offices`, {
+            method: 'GET'
+        }).then(res => {
+            return res.json();
+        });
+    }
+
+    
+    getTasksStatus = () => {
+        return fetch(`${this._url}/get_tasks_status`, {
+            method: 'GET'
+        }).then(res => {
+            return res.json();
+        });
+    }
+
+    getTasks = () => {
+        return fetch(`${this._url}/employees_tasks`, {
             method: 'GET'
         }).then(res => {
             return res.json();

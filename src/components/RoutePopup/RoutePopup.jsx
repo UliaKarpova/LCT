@@ -8,13 +8,14 @@ import { useContext, useState } from "react";
 import Waiting from "../../assets/images/icons/waiting.svg?react";
 import Processing from "../../assets/images/icons/processing.svg?react";
 import Done from "../../assets/images/icons/processing.svg?react.svg?react";
-import { getDeclension } from "../../utils/helpers.js";
+import {createUserObject, getDeclension} from "../../utils/helpers.js";
 import { AppContext } from "../../context/index.js";
 import { statusChanger } from "../../utils/constants.js";
 import Timer from "../Timer/Timer.jsx";
+import api from "../../utils/api.js";
 
 const RoutePopup = ({ closeModal, nativeBranchLocation }) => {
-  const { dailyTasks, setDailyTasks } = useContext(AppContext);
+  const { user, dailyTasks, setDailyTasks } = useContext(AppContext);
 
   const lastDoneLocation =
     dailyTasks.findLast((task) => task.status === 4 || task.status === 3)
@@ -54,15 +55,25 @@ const RoutePopup = ({ closeModal, nativeBranchLocation }) => {
     },
   };
 
-  const handleButtonClick = () => {
-    setDailyTasks((prev) =>
-      prev.map((item) =>
-        item.id === taskToDo.id
-          ? { ...taskToDo, status: statusChanger[taskToDo.status].nextStatus }
-          : item,
-      ),
-    );
-    refreshMap();
+  const handleButtonClick = async () => {
+    try {
+      await api.updateStatus(
+          user.id,
+          taskToDo.id,
+          statusChanger[taskToDo.status].nextStatus,
+      );
+
+      const updatedRes = await api.getUser(user.id);
+      const updatedData = await updatedRes.json();
+
+      setDailyTasks(createUserObject(updatedData).tasks);
+
+      refreshMap();
+
+    } catch (err) {
+      console.log(`Произошла ошибка: ${err}`);
+    }
+
   };
 
   return (

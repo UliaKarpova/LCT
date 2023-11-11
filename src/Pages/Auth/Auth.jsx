@@ -6,6 +6,7 @@ import './Auth.css'
 import CreateUserPopup from "../../components/CreateUserPopup/CreateUserPopup.jsx";
 import {useState} from "react";
 import {useForm} from "react-hook-form";
+import CreateOfficePopup from "../../components/CreateOfficePopup/CreateOfficePopup.jsx";
 
 function Auth() {
     const [isPopupVisible, setIsPopupVisible] =useState(false)
@@ -66,7 +67,7 @@ function Auth() {
                   <Button type='button' className='bottom' onClick={() => setIsPopupVisible(true)}>Войти</Button>
               </form>
           </div>
-          {isPopupVisible && <CreateUserPopup closeModal={() => setIsPopupVisible(false)}/>}
+          {isPopupVisible && <CreateOfficePopup closeModal={() => setIsPopupVisible(false)}/>}
       </>
   )
 }

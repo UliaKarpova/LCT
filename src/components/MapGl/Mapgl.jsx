@@ -5,6 +5,7 @@ import { Clusterer } from '@2gis/mapgl-clusterer';
 import { RulerControl } from '@2gis/mapgl-ruler';
 import { Directions } from '@2gis/mapgl-directions';
 import { MapWrapper } from './MapWrapper.jsx';
+import {mapKey} from "../../config/keys.js";
 
 export default function Mapgl({center, points}) {
     const { setMapglContext } = useMapglContext();
@@ -20,7 +21,7 @@ export default function Mapgl({center, points}) {
             map = new mapgl.Map('map-container', {
                 center: center,
                 zoom: 13,
-                key: '9e9b5792-8bd1-4217-8f90-92f3a833dbca',
+                key: mapKey,
             });
 
             map.on('click', (e) => console.log(e));

@@ -1,4 +1,4 @@
-import {forwardRef, useState} from "react";
+import {forwardRef, useEffect, useState} from "react";
 import classnames from "classnames";
 import styles from "./Input.module.css";
 
@@ -6,7 +6,7 @@ const InputField = forwardRef(
   (props, ref) => {
     const { labelId = "", forPassword = false,  hasError, errorMessage, disabled, ...rest } = props;
 
-    const [isVisible, setVisible] = useState(false)
+    const [isInvisible, setInvisible] = useState(forPassword)
 
     const inputClassName = classnames({
       [styles.input]: true,
@@ -20,13 +20,13 @@ const InputField = forwardRef(
           {...(labelId && { id: labelId })}
           className={inputClassName}
           ref={ref}
-          type={!isVisible ? 'password' : 'text'}
+          type={isInvisible ? 'password' : 'text'}
           {...rest}
         />
         {errorMessage && (
           <div className={styles.errorMessage}>{errorMessage}</div>
         )}
-        {forPassword && <button type='button' onClick={() => setVisible(!isVisible)} className={styles.eyeButton}></button>}
+        {forPassword && <button type='button' onClick={() => setInvisible(!isInvisible)} className={styles.eyeButton}></button>}
       </div>
     );
   },

@@ -8,9 +8,9 @@ import {useContext, useState} from "react";
 import Waiting from '../../assets/images/icons/waiting.svg?react';
 import Processing from '../../assets/images/icons/processing.svg?react';
 import Done from '../../assets/images/icons/processing.svg?react.svg?react';
-import {getDeclension} from "../../common/helpers.js";
+import {getDeclension} from "../../utils/helpers.js";
 import {AppContext} from "../../context/index.js";
-import {statusChanger} from "../../common/constants.js";
+import {statusChanger} from "../../utils/constants.js";
 
 const priorities = {
     Hight: 'высокий',

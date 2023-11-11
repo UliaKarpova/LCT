@@ -1,3 +1,5 @@
+import {getCoordinates} from "./api.js";
+
 export function getDeclension(number, words_arr) {
     number = Math.abs(number);
     if (Number.isInteger(number)) {
@@ -49,4 +51,38 @@ export function getCookie(name) {
 
 export function deleteCookie(name) {
     setCookie(name, null, { expires: -1 });
+}
+
+export const createUserObject = (user) => {
+    const timeForTask = {
+        'Выезд на точку для стимулирования выдач': 4,
+        'Обучение агента': 2,
+        'Доставка карт и материалов': 1.5
+    }
+
+    const tasks = user.assigned_offices.map(office =>
+    {
+        return {
+            id: office._id,
+            status: office.status,
+            name: office.PriorityReason,
+            priority: office.priority,
+            time: timeForTask[office.PriorityReason],
+            branch: {
+            address: 'Краснодар, ' + office["Адрес точки, г. Краснодар"],
+            location: [office['Координаты'].lon, office['Координаты'].lat]
+        }}
+    })
+
+        return {
+        id: user._id,
+        name: user.ФИО,
+        grade: user.Грейд,
+        nativeBranch: {
+            address: user['Адрес локации'],
+            location: [user['Координаты офиса'].lon, user['Координаты офиса'].lat]
+        },
+        role: user.role,
+        tasks
+    }
 }

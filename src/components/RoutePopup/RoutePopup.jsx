@@ -12,12 +12,6 @@ import {getDeclension} from "../../utils/helpers.js";
 import {AppContext} from "../../context/index.js";
 import {statusChanger} from "../../utils/constants.js";
 
-const priorities = {
-    Hight: 'высокий',
-    Medium: 'средний',
-    Low: 'низкий'
-}
-
 const RoutePopup = ({closeModal, nativeBranchLocation}) => {
     const { dailyTasks, setDailyTasks } = useContext(AppContext)
 
@@ -31,17 +25,10 @@ const RoutePopup = ({closeModal, nativeBranchLocation}) => {
         setRefreshKey(oldKey => oldKey + 1);
     }
 
-    const priorityClassname = classnames({
-        [styles.priority]: true,
-        [styles[taskToDo?.priority]]: true
-    })
-
     const statusClassname = classnames({
         [styles.status]: true,
         [styles[taskToDo?.status]]: true
     })
-
-    console.log('toDo', taskToDo)
 
 
     const status = {

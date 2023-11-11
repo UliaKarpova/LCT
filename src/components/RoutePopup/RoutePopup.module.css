@@ -54,21 +54,6 @@
     max-width: 129px;
 }
 
-.Hight * {
-    fill: #F04256;
-    color: #F04256;
-}
-
-.Medium * {
-    fill: #D74D00;
-    color: #D74D00;
-}
-
-.Low * {
-    fill: #5AA300;
-    color: #5AA300;
-}
-
 .title {
     font-size: 16px;
     font-style: normal;

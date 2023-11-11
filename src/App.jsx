@@ -4,7 +4,7 @@ import Auth from './Pages/Auth/Auth';
 import Manager from './Pages/ManagerProfile/Manager';
 import WorkerProfile from "./Pages/WorkerProfile/WorkerProfile.jsx";
 import {AppContext} from "./context/index.js";
-import {getCookie} from "./utils/helpers.js";
+import {createUserObject, getCookie} from "./utils/helpers.js";
 import api from "./utils/api.js";
 import ClipLoader from "react-spinners/ClipLoader";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
@@ -28,7 +28,11 @@ function App() {
             setIsLoading(true)
             const res = await api.getUser(userId);
             const loginUser = await res.json();
-            await setUser(loginUser)
+            if (loginUser.role === 'worker') {
+              await setUser(createUserObject(loginUser))
+            } else {
+              setUser(loginUser)
+            }
           }
         } catch (err) {
           console.log(`Произошла ошибка: ${err}`)

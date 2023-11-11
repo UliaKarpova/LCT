@@ -3,32 +3,34 @@ import styles from './TaskPopup.module.css'
 import Done from "../../images/done.png";
 import InWork from "../../images/inWork.png";
 import Processing from "../../images/processing.png";
+import OnWay from "../../images/inWay.png";
 import Alert from "../../assets/images/icons/Ellipse-Allert.svg?react";
 import Map from "../../assets/images/icons/Map.svg?react";
 import classnames from "classnames";
-import {getDeclension} from "../../utils/helpers.js";
+import {createUserObject, getDeclension} from "../../utils/helpers.js";
 import Waiting from "../../assets/images/icons/waiting.svg?react";
 import Process from "../../assets/images/icons/processing.svg?react";
 import Closed from "../../assets/images/icons/Ellipse-check.svg?react";
 import Button from "../ui/Button/Button.jsx";
-import {useContext, useEffect, useState} from "react";
+import {useContext} from "react";
 import {AppContext} from "../../context/index.js";
 import {statusChanger} from "../../utils/constants.js";
+import api from "../../utils/api.js";
 
 const priorities = {
-    Hight: 'высокий',
-    Medium: 'средний',
-    Low: 'низкий'
+    HighPriority: 'высокий',
+    MediumPriority: 'средний',
+    LowPriority: 'низкий'
 }
 
 const status = {
     1: Processing,
-    2: Processing,
+    2: OnWay,
     3: InWork,
     4: Done
 }
 const TaskPopup = ({task, setTask, closePopup, handleMapButton, isNoButton}) => {
-    const {dailyTasks, setDailyTasks} = useContext(AppContext)
+    const {user, dailyTasks, setDailyTasks} = useContext(AppContext)
 
     const priorityClassname = classnames({
         [styles.priority]: true,
@@ -39,9 +41,6 @@ const TaskPopup = ({task, setTask, closePopup, handleMapButton, isNoButton}) => 
         [styles.bottomStatus]: true,
         [styles[task?.status]]: true
     })
-
-    console.log(task)
-    console.log(dailyTasks)
 
     const statuses = {
         1:
@@ -66,14 +65,24 @@ const TaskPopup = ({task, setTask, closePopup, handleMapButton, isNoButton}) => 
 
     }
 
-    const handleButtonClick = () => {
-        setDailyTasks((prev) =>
-            prev.map(item =>
-                item.id === task.id
-                    ? {...task, status: statusChanger[task.status].nextStatus}
-                    : item))
-        task.status = statusChanger[task.status].nextStatus
+    const handleButtonClick = async () => {
+        try {
+            const update = await api.updateStatus(user.id, task.id, statusChanger[task.status].nextStatus)
+
+            const updatedRes = await api.getUser(user.id)
+            const updatedData = await updatedRes.json()
+
+            setDailyTasks(createUserObject(updatedData).tasks)
+
+            if (update && updatedData) {
+                task.status = statusChanger[task.status].nextStatus
+            }
+        }
+        catch (err) {
+            console.log(`Произошла ошибка: ${err}`)
+        }
     }
+
 
     return (
         <Modal closeModal={closePopup}>

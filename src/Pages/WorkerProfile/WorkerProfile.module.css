@@ -4,15 +4,14 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     justify-content: center;
-    padding: 0 16px 16px;
+    padding-bottom: 16px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-bottom: 24px;
+    margin: 0 16px 24px;
 }
 
 .name {
@@ -34,15 +33,37 @@
     font-weight: 590;
     line-height: 120%; /* 33.6px */
     letter-spacing: -0.4px;
-    margin-bottom: 16px;
+    margin: 0 16px 16px;
 }
 
 .taskContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 14px;
+    gap: 16px;
     list-style-type: none;
     max-height: calc(100vh - 162px);
     overflow: auto;
 }
+
+.button {
+    margin: 0 16px;
+}
+
+.cardWrapper {
+    margin: 0 16px;
+}
+
+.cardWrapper:first-of-type {
+    margin-top: 16px;
+}
+
+.cardWrapper:last-of-type {
+    margin-bottom: 16px;
+}
+
+.button {
+    margin: 0 16px;
+    width: auto;
+}
+

@@ -1,0 +1,6 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon">
+<rect width="16" height="16" rx="8" fill="#003791"/>
+<path id="icon_2" fill-rule="evenodd" clip-rule="evenodd" d="M8 3C7.44772 3 7 3.44772 7 4V8C7 8.33435 7.1671 8.64658 7.4453 8.83205L10.4453 10.8321C10.9048 11.1384 11.5257 11.0142 11.8321 10.5547C12.1384 10.0952 12.0142 9.4743 11.5547 9.16795L9 7.46482V4C9 3.44772 8.55228 3 8 3Z" fill="white"/>
+</g>
+</svg>

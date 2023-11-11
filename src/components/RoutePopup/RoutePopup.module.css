@@ -7,13 +7,12 @@
 
 .wrapper {
     position: absolute;
-    bottom: 4px;
+    bottom: 0;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px 12px 0 0;
     background: #FFF;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08), 0px 3px 15px 0px rgba(11, 15, 20, 0.12);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 3px 15px 0 rgba(11, 15, 20, 0.12);
     z-index: 999;
-    padding: 16px 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,17 +28,9 @@
     font-weight: 590;
     line-height: 120%; /* 24px */
     letter-spacing: -0.4px;
-}
-
-.priority {
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 590;
-    line-height: 16px;
-    margin-bottom: 8px;
+    height: 200px;
 }
 
 .buttonWrapper {
@@ -79,25 +70,67 @@
 }
 
 .title {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 590;
-    line-height: 120%; /* 24px */
-    letter-spacing: -0.4px;
-    margin-bottom: 4px;
-}
-
-.time {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    margin-bottom: 12px;
-}
-
-.timer {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
+}
+
+.time {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.timer {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.topWrapper {
+    padding: 16px;
+    border-bottom: 1px solid #E6E8EA;
+}
+
+.bottomWrapper {
+    padding: 8px 12px 12px;
+}
+
+.statusWrapper {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.status {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: 2px;
+}
+
+.processing {
+    color: #003791;
+}
+
+.waiting {
+    color: #40474F;
+}
+
+.timeLeft {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.timeWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
 }

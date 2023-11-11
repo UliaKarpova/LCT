@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import XIcon from '../../assets/images/icons/Ellipse-close.svg?react'
+import CloseL from '../../assets/images/icons/Close-L.svg?react'
 import ModalOverlay from "../ui/ModalOverlay/ModalOverlay.jsx";
 import styles from './Modal.module.css'
 import classnames from "classnames";
@@ -35,7 +36,9 @@ const Modal = ({ closeModal, children, leftIcon }) => {
                     onClick={closeModal}
                     className={iconClassname}
                 >
-                    <XIcon/>
+                    {!leftIcon
+                    ? <XIcon/>
+                    : <span className={styles.iconL} ><CloseL/></span>}
                 </button>
             </div>
             <ModalOverlay onClick={closeModal} />

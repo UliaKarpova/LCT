@@ -3,7 +3,6 @@
   border-radius: 8px;
   padding: 12px 24px;
   height: 48px;
-  width: 100%;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -16,4 +15,5 @@
   position: relative;
   color: #FFFFFF;
   background-color: #FF4B5F;
+  width: 100%;
 }

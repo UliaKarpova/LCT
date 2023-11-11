@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react'
-import Auth from './components/Auth/Auth'
-import Manager from './Pages/ManagerProfile/Manager'
+import { useState } from 'react';
+import Auth from './Pages/Auth/Auth';
+import Manager from './Pages/ManagerProfile/Manager';
 import WorkerProfile from "./Pages/WorkerProfile/WorkerProfile.jsx";
 import {AppContext} from "./context/index.js";
 

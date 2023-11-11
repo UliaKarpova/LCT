@@ -48,7 +48,7 @@ const CreateUserPopup = ({closeModal}) => {
                     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
                         <Input
                             placeholder='Логин сотрудника'
-                            {...register("login", {
+                            {...register("username", {
                                 required: 'Поле обязательно',
                                 minLength: {
                                     value: 3,

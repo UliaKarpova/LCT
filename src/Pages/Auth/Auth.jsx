@@ -3,15 +3,44 @@ import allert from '../../images/allert.svg'
 import Button from "../../components/ui/Button/Button";
 import Input from "../../components/ui/Input/Input";
 import './Auth.css'
-import CreateUserPopup from "../.../../../components/CreateUserPopup/CreateUserPopup";
-import {useState} from "react";
 import {useForm} from "react-hook-form";
-import CreateOfficePopup from "../../components/CreateOfficePopup/CreateOfficePopup.jsx";
+import api from "../../utils/api.js";
+import {useContext, useEffect} from "react";
+import {AppContext} from "../../context/index.js";
+import {useNavigate} from "react-router-dom";
+import {setCookie} from "../../utils/helpers.js";
 
 function Auth() {
-    const [isPopupVisible, setIsPopupVisible] =useState(false)
+    const navigate = useNavigate()
 
-    console.log(isPopupVisible)
+    const {user, setUser} = useContext(AppContext)
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset
+    } = useForm({ mode: "onChange" });
+
+    const onSubmit = async (data) => {
+        try {
+            const res = await api.login(data)
+            const user = await res.json()
+            await setUser(user)
+            setCookie("userId", user.role === 'worker' ? user._id : 'admin')
+            reset()
+        }
+        catch (err) {
+            console.log(`Произошла ошибка: ${err}`)
+        }
+    }
+
+
+    useEffect(() => {
+        if (user) {
+            navigate(user.role === 'worker' ? 'worker' : 'manager/workers')
+        }
+    }, [user, navigate]);
 
   return (
       <>
@@ -20,9 +49,32 @@ function Auth() {
                    src={logo}
                    alt='Логотип Совкомбанка' />
               <h1 className='title'>Авторизация</h1>
-              <form className='form'>
-                  <Input style={{ with: '100%' }} placeholder='Логин' />
-                  <Input placeholder='Пароль' forPassword />
+              <form className='form' onSubmit={handleSubmit(onSubmit)}>
+                  <Input
+                      placeholder='Логин'
+                      {...register("username", {
+                          required: 'Поле обязательно',
+                          minLength: {
+                              value: 3,
+                              message: 'Минимум 3 символа'
+                          }
+                      })}
+                      hasError={Boolean(errors.login)}
+                      errorMessage={errors.login?.message}
+                  />
+                  <Input
+                      placeholder='Пароль'
+                      forPassword
+                      {...register("password", {
+                          required: 'Поле обязательно',
+                          minLength: {
+                              value: 8,
+                              message: 'Минимум 8 символов'
+                          }
+                      })}
+                      hasError={Boolean(errors.password)}
+                      errorMessage={errors.password?.message}
+                  />
                   <div className='warning'>
                       <img className='warning_img'
                            src={allert}
@@ -31,10 +83,9 @@ function Auth() {
             Для регистрации в приложении<br />обратитесь к менеджеру
           </span>
                   </div>
-                  <Button type='button' className='bottom' onClick={() => setIsPopupVisible(true)}>Войти</Button>
+                  <Button type='submit' className='bottom'>Войти</Button>
               </form>
           </div>
-          {isPopupVisible && <CreateOfficePopup closeModal={() => setIsPopupVisible(false)}/>}
       </>
   )
 }

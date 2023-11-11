@@ -9,7 +9,7 @@ import More from '../../../../components/ui/More/More'
 
 function DepsItem({ dep }) {
   
-  const src = dep.isDelivered ? good : bad;
+  const src = dep['Карты и материалы доставлены?'] === 'да' ? good : bad;
 
   function getSrc(task) {
     return task.status === 1 ? processing 
@@ -39,7 +39,7 @@ function DepsItem({ dep }) {
         <tbody>
           <tr className='dep_row'>
             <td className='dep_cell'>{dep.employee_info[0].PriorityReason}</td>
-            <td className='dep_cell'>{dep.employee_info[0]['ФИО']}</td>
+            <td className='dep_cell'><img src={dep.avatar} className='dep_avatar' alt='Аватар' />{dep.employee_info[0]['ФИО']}</td>
             <td className='dep_cell'><img className='dep_cell_img' src={getSrc(dep.employee_info[0])} alt='Статус задачи' /></td>
           </tr>
         </tbody>

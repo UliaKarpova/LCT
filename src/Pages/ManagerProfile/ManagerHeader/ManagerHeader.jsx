@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import LogoutButton from '../../../components/LogoutButton/LogoutButton';
 import logo from '../../../images/logo.png'
 import avatar from '../../../images/photo.jpg'
+import {deleteCookie, getCookie} from "../../../utils/helpers.js";
 import './ManagerHeader.css'
 
 function ManagerHeader(pathname) {
@@ -21,7 +23,7 @@ function ManagerHeader(pathname) {
           <h4 className='user_name'>Александр Новиков</h4>
           <span className='user_role'>Менеджер</span>
         </div>
-        <button className='arrow' type='button'></button>
+        <LogoutButton />
       </div>
     </header>
   )

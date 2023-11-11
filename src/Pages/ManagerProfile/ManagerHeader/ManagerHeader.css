@@ -49,10 +49,11 @@
 .user {
   display: flex;
   flex-direction: row;
-  width: 228px;
+  width: 260px;
   height: 40px;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .user_avatar {

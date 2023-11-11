@@ -17,7 +17,6 @@ function Departments() {
     })
   }, [])
 
-  console.log(departments)
   const locations = [{
       address: 'ул. Красная, д. 139',
       number: 3, 
@@ -33,7 +32,9 @@ function Departments() {
   }]
   return (
     <main className='main'>
-      <ManagerPanel title='Отделения и партнёры' btnText='Добавить отделение / Партнёра' placeholderText='Поиск по отделениям' />
+      <ManagerPanel title='Отделения и партнёры' 
+        btnText='Добавить отделение / Партнёра' 
+        placeholderText='Поиск по отделениям' />
       <table className='location_list'>
         <caption className='table-title'>Выездные локации</caption>
         <thead className='table_top'>

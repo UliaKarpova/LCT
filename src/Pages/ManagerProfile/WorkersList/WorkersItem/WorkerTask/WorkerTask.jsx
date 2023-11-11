@@ -1,15 +1,14 @@
 import './WorkerTask.css'
-// import { useState } from 'react'
 import inWork from '../../../../../images/inWork.png'
-import waiting from '../../../../../images/processing.png'
+import processing from '../../../../../images/processing.png'
 import done from '../../../../../images/done.png'
+import inWay from '../../../../../images/inWay.png'
 import arrowRight from '../../../../../images/arrowRight.svg'
 
 function WorkerTask({ task }) {
-  // const [openEdit, setOpenEdit] = useState(false)
-  const statusTag = task.status === 1 ? waiting 
-    : task.status === 2 ? inWork : task.status === 3 ? '#'
-    : task.status === 4 ? done : '';
+  const statusTag = task.status === 1 ? processing 
+    : task.status === 2 ? inWay : task.status === 3 ? inWork
+    : task.status === 4 ? done : processing;
 
   return (
     <div className='task'>

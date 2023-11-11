@@ -1,0 +1,90 @@
+.all_tasks {
+  display: grid;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 24px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+}
+.all_tasks_cell {
+  display: flex;
+  padding: var(--spacing-xs, 16px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-3-xs, 8px);
+  border-radius: 12px;
+  background: var(--background-white, #FFF);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08), 0px 3px 15px 0px rgba(11, 15, 20, 0.12);
+}
+.number {
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  font-family: SF Pro, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 590;
+  line-height: 100%; /* 32px */
+  letter-spacing: -0.32px;
+}
+.caption {
+  color: var(--text-primary, #0B0F14);
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.of_list {
+  width: 100%;
+}
+.of_hd {
+  width: 100%;
+}
+.of_row  {
+  display: grid;
+  padding: 12px 16px;
+  grid-template-columns: 1fr 1fr 168px 100px;
+  border-top: 1px solid var(--border-neutral-150, #E6E8EA);
+}
+.of_th {
+  color: var(--text-tertiary, #697481);
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  text-align: left;
+}
+.of_hrrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 168px 100px;
+  padding: var(--spacing-2-xs, 12px) var(--spacing-xs, 16px);
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  border-top: 1px solid var(--border-neutral-150, #E6E8EA);
+  position: relative;
+}
+.of_cell {
+  color: var(--text-primary, #0B0F14);
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  display: flex;
+  align-items: center;
+}
+.cell_avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.cell_img {
+  height: 24px;
+  max-width: 110px;
+}

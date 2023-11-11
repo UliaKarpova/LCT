@@ -30,9 +30,11 @@ const CreateUserPopup = ({closeModal}) => {
     } = useForm({ mode: "onChange" });
 
     const onSubmit = (data) => {
-        console.log(data)
         api.createUser(data).then((res) => {
-            console.log(res)
+            if(res.ok) {
+                reset();
+                closeModal()
+            }
         })
         reset()
     }

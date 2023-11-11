@@ -1,7 +1,7 @@
 import logo from '../../images/logo.png'
 import allert from '../../images/allert.svg'
-import Button from "../../components/ui/Button/Button.jsx";
-import Input from "../../components/ui/Input/Input.jsx";
+import Button from "../../components/ui/Button/Button";
+import Input from "../../components/ui/Input/Input";
 import './Auth.css'
 import {useForm} from "react-hook-form";
 import api from "../../utils/api.js";
@@ -35,6 +35,7 @@ function Auth() {
         }
     }
 
+
     useEffect(() => {
         if (user) {
             navigate(user.role === 'worker' ? 'worker' : 'manager/workers')
@@ -43,7 +44,7 @@ function Auth() {
 
   return (
       <>
-          <div className='auth' onSubmit={handleSubmit(onSubmit)}>
+          <div className='auth'>
               <img className='logo'
                    src={logo}
                    alt='Логотип Совкомбанка' />

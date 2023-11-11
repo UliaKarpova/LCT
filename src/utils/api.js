@@ -1,3 +1,5 @@
+import {geocoderKey} from "../config/keys.js";
+
 class Api {
     constructor(config) {
         this._url = config.url/*/employees'*/;
@@ -61,5 +63,19 @@ const api = new Api({
       "Content-Type": "application/json",
     }
 });
+
+export const getCoordinates = async (address) => {
+    try {
+        const res = await fetch(`https://geocode-maps.yandex.ru/1.x/?apikey=${geocoderKey}&geocode=${address}&format=json`);
+        const data = await res.json()
+        const coords = data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos;
+        return coords.split(' ').reverse().map(coord => Number(coord))
+    }
+    catch (err) {
+        throw new Error(`Ошибка запроса координат: ${err}`)
+    }
+
+}
+
 
 export default api;

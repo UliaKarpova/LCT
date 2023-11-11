@@ -14,9 +14,9 @@ const WorkerProfile = () => {
     const [detailedTask, setDetailedTask] = useState(null)
     const { user, dailyTasks, setDailyTasks } = useContext(AppContext)
 
-        useEffect(() => {
+    useEffect(() => {
         if (!dailyTasks) {
-            setDailyTasks(users[0].tasks)
+            setDailyTasks(user.tasks)
         }
     });
 

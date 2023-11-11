@@ -8,7 +8,7 @@ import api from "../../utils/api.js";
 import {useContext, useEffect} from "react";
 import {AppContext} from "../../context/index.js";
 import {useNavigate} from "react-router-dom";
-import {setCookie} from "../../utils/helpers.js";
+import {createUserObject, setCookie} from "../../utils/helpers.js";
 
 function Auth() {
     const navigate = useNavigate()
@@ -26,7 +26,11 @@ function Auth() {
         try {
             const res = await api.login(data)
             const user = await res.json()
-            await setUser(user)
+            if (user.role === 'worker') {
+                await setUser(createUserObject(user))
+            } else {
+                await setUser(user)
+            }
             setCookie("userId", user.role === 'worker' ? user._id : 'admin')
             reset()
         }

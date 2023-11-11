@@ -3,19 +3,20 @@ import ArrowRight from '../../assets/images/icons/Arrow_right.svg?react'
 import Location from '../../assets/images/icons/Location.svg?react'
 import Alert from '../../assets/images/icons/Ellipse-Allert.svg?react'
 import Waiting from '../../images/processing.png'
+import OnWay from '../../images/inWay.png'
 import InWork from '../../images/inWork.png'
 import Done from '../../images/done.png'
 import classnames from "classnames";
 
 const priorities = {
-    Hight: 'высокий',
-    Medium: 'средний',
-    Low: 'низкий'
+    HighPriority: 'высокий',
+    MediumPriority: 'средний',
+    LowPriority: 'низкий'
 }
 
 const status = {
     1: Waiting,
-    2: Waiting,
+    2: OnWay,
     3: InWork,
     4: Done
 }

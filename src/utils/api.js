@@ -68,6 +68,18 @@ class Api {
     getUser = id => {
         return fetch(`${this._url}/users/${id}`).then(this._getResponseData);
     }
+
+    updateStatus = (userId, taskId, nextStatus) => {
+        return fetch(`${this._url}/status`, {
+            method: 'POST',
+            headers: this._headers,
+            body: JSON.stringify({
+                employee_id: userId,
+                office_id: taskId,
+                new_status: nextStatus
+            })
+        }).then(this._getResponseData);
+    }
 }
 const api = new Api({
     url: 'http://94.139.254.101:8010',

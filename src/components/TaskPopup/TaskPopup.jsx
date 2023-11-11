@@ -6,14 +6,14 @@ import Processing from "../../images/processing.png";
 import Alert from "../../assets/images/icons/Ellipse-Allert.svg?react";
 import Map from "../../assets/images/icons/Map.svg?react";
 import classnames from "classnames";
-import {getDeclension} from "../../common/helpers.js";
+import {getDeclension} from "../../utils/helpers.js";
 import Waiting from "../../assets/images/icons/waiting.svg?react";
 import Process from "../../assets/images/icons/processing.svg?react";
 import Closed from "../../assets/images/icons/Ellipse-check.svg?react";
 import Button from "../ui/Button/Button.jsx";
 import {useContext, useEffect, useState} from "react";
 import {AppContext} from "../../context/index.js";
-import {statusChanger} from "../../common/constants.js";
+import {statusChanger} from "../../utils/constants.js";
 
 const priorities = {
     Hight: 'высокий',

@@ -8,6 +8,8 @@ import {AppContext} from "./context/index.js";
 function App() {
   const [user, setUser] = useState(null);
   const [dailyTasks, setDailyTasks] = useState(null)
+  console.log(import.meta.env.VITE_MAP_KEY)
+
 
   return (
       <AppContext.Provider value={{user, setUser, dailyTasks, setDailyTasks}}>

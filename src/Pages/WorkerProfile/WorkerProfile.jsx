@@ -7,6 +7,7 @@ import {useContext, useEffect, useState} from "react";
 import RoutePopup from "../../components/RoutePopup/RoutePopup.jsx";
 import {AppContext} from "../../context/index.js";
 import TaskPopup from "../../components/TaskPopup/TaskPopup.jsx";
+import LogoutButton from "../../components/LogoutButton/LogoutButton.jsx";
 
 const WorkerProfile = () => {
     const [isVisibleMap, setIsVisibleMap] = useState(false)
@@ -25,7 +26,7 @@ const WorkerProfile = () => {
         <div className={styles.container}>
             <div className={styles.header}>
                 <span className={styles.name}>Никита В.</span>
-                <span className={styles.logo}><Logo/></span>
+                <LogoutButton/>
             </div>
             <div>
                 <h2 className={styles.title}>Задачи на день</h2>

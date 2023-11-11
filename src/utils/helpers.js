@@ -70,7 +70,8 @@ export const createUserObject = (user) => {
             time: timeForTask[office.PriorityReason],
             branch: {
             address: 'Краснодар, ' + office["Адрес точки, г. Краснодар"],
-            location: [office['Координаты'].lon, office['Координаты'].lat]
+            location: [office['Координаты'].lon, office['Координаты'].lat],
+            startedAt: office.startedAt
         }}
     })
 

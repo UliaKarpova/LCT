@@ -11,6 +11,7 @@ import Done from '../../assets/images/icons/processing.svg?react.svg?react';
 import {getDeclension} from "../../utils/helpers.js";
 import {AppContext} from "../../context/index.js";
 import {statusChanger} from "../../utils/constants.js";
+import Timer from "../Timer/Timer.jsx";
 
 const RoutePopup = ({closeModal, nativeBranchLocation}) => {
     const { dailyTasks, setDailyTasks } = useContext(AppContext)
@@ -77,7 +78,7 @@ const RoutePopup = ({closeModal, nativeBranchLocation}) => {
                                     {status[taskToDo.status].logo}
                                     <span className={statusClassname}>{status[taskToDo.status].text}</span>
                                 </div>
-                                <span className={styles.timeLeft}>Осталось: 2 часа</span>
+                                <Timer task={taskToDo}/>
                             </div>
                             <div className={styles.buttonWrapper}>
                                 {taskToDo.status === 2 && <div className={styles.onWay}>

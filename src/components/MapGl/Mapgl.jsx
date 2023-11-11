@@ -32,11 +32,6 @@ export default function Mapgl({center, points}) {
                 radius: 60,
             });
 
-            // const taskMarkers = tasks.map(task => ({coordinates: task.branch.location}))
-            //
-            // const markers = taskMarkers;
-            // clusterer.load(markers);
-
             directions = new Directions(map, {
                 directionsApiKey: '9e9b5792-8bd1-4217-8f90-92f3a833dbca',
             });

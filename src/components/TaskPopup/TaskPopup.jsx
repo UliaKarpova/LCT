@@ -16,6 +16,7 @@ import {useContext} from "react";
 import {AppContext} from "../../context/index.js";
 import {statusChanger} from "../../utils/constants.js";
 import api from "../../utils/api.js";
+import Timer from "../Timer/Timer.jsx";
 
 const priorities = {
     HighPriority: 'высокий',
@@ -41,6 +42,8 @@ const TaskPopup = ({task, setTask, closePopup, handleMapButton, isNoButton}) => 
         [styles.bottomStatus]: true,
         [styles[task?.status]]: true
     })
+
+    console.log(task)
 
     const statuses = {
         1:
@@ -114,7 +117,7 @@ const TaskPopup = ({task, setTask, closePopup, handleMapButton, isNoButton}) => 
                             {statuses[task.status].logo}
                             <span className={statusClassname}>{statuses[task.status].text}</span>
                         </div>
-                        <span className={styles.timeLeft}>Осталось: 2 часа</span>
+                        <Timer task={task}/>
                     </div>
                     {
                         task.status !== 4 && !isNoButton &&

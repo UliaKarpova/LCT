@@ -1,0 +1,52 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.2);
+  height: auto;
+  box-sizing: border-box;
+  z-index: 999;
+  opacity: 0;
+  animation: rising 0.5s forwards;
+}
+
+.close {
+  position: absolute;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.rightIcon {
+  top: 16px;
+  right: 16px;
+}
+
+.leftIcon {
+  top: 24px;
+  left: 24px;
+}
+
+.iconL {
+  padding: 8px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.08),
+    0 3px 15px 0 rgba(11, 15, 20, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rising {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

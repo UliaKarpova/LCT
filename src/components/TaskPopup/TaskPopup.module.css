@@ -1,0 +1,165 @@
+.popup {
+  width: 100%;
+  min-width: 416px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.08),
+    0 3px 15px 0 rgba(11, 15, 20, 0.12);
+  z-index: 999;
+}
+
+.wrapper {
+  padding: 16px;
+  border-bottom: 1px solid #e6e8ea;
+}
+.wrapper:last-of-type {
+  border-bottom: none;
+}
+
+.title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.4px;
+  margin-bottom: 12px;
+}
+
+.priority {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.HighPriority * {
+  fill: #f04256;
+  color: #f04256;
+}
+
+.MediumPriority * {
+  fill: #d74d00;
+  color: #d74d00;
+}
+
+.LowPriority * {
+  fill: #5aa300;
+  color: #5aa300;
+}
+
+.status {
+  height: 24px;
+}
+
+.statuses {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.point {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.address {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 12px;
+}
+
+.timeWrapper {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #eeeff1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.time {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.timer {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.routeButton {
+  padding: 12px;
+  border-radius: 10px;
+  background: #eeeff1;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  color: #003791;
+  cursor: pointer;
+}
+
+.timerWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.bottomStatusWrapper {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.bottomStatus {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  margin-top: 2px;
+}
+
+.processing {
+  color: #003791;
+}
+
+.waiting {
+  color: #40474f;
+}
+
+.done {
+  color: #5aa300;
+}
+
+.timeLeft {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}

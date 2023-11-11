@@ -1,0 +1,63 @@
+export const tasks = [ 
+    {name: 'Доставка карт и материалов', priority: 'Low', time: 1.5, grade: Array(3), address: ''},
+    
+    {name: 'Доставка карт и материалов', priority: 'Low', time: 1.5, grade: Array(3), address: ''},
+   
+    {name: 'Доставка карт и материалов', priority: 'Low', time: 1.5, grade: Array(3), address: ''},
+   
+    {name: 'Доставка карт и материалов', priority: 'Low', time: 1.5, grade: Array(3), address: ''},
+   
+    {name: 'Доставка карт и материалов', priority: 'Low', time: 1.5, grade: Array(3), address: ''},
+    
+    {name: 'Доставка карт и материалов', priority: 'Low', time: 1.5, grade: Array(3), address: ''},
+   
+   
+    
+    {name: 'Доставка карт и материалов', priority: 'Low', time: 1.5, grade: Array(3), address: 'п. Березовый, ул. Целиноградская, д. 6/1'},
+    
+ 
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. им. Дзержинского, д. 100'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'тер. Пашковский жилой массив, ул. Крылатая, д. 2'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. Таманская, д. 153 к. 3, кв. 2'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. Уральская, д. 162'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. им. Селезнева, д. 197/5'},
+ 
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. Зиповская, д. 1'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. им. 40-летия Победы, д. 20/1'},
+ 
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. им. Героя Аверкиева А.А., д. 8'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. им. Героя Аверкиева А.А., д. 8/1 к. мая, кв. 268'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. им. Тургенева, д. 106'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. Северная, д. 524'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. им. Кирилла Россинского, д. 61/1'},
+ 
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. им. Дзержинского, д. 100'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: 'ул. Северная, д. 326'},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: ''},
+ 
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: ''},
+
+{name: 'Обучение агента', priority: 'Medium', time: 2, grade: Array(2), address: ''},
+
+
+
+{name: 'Выезд на точку для стимулирования выдач', priority: 'Hight', time: 4, grade: Array(1), address: 'ул. Восточно-Кругликовская, д. 64/2'},
+ 
+{name: 'Выезд на точку для стимулирования выдач', priority: 'Hight', time: 4, grade: Array(1), address: 'ул. Красных Партизан, д. 439'},
+
+{name: 'Выезд на точку для стимулирования выдач', priority: 'Hight', time: 4, grade: Array(1), address: 'ст-ца. Елизаветинская, ул. Широкая, д. 260'},
+
+    
+]

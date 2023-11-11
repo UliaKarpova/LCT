@@ -1,0 +1,30 @@
+/* .workers {
+  width: 100%;
+  padding: 40px 64px 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+} */
+
+.grade_select {
+  width: 160px;
+  height: 44px;
+  padding: 10px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid var(--border-neutral-200, #d5d8dd);
+  background: var(--background-white, #fff);
+}
+
+.workers_list {
+  list-style: none;
+  margin-bottom: 64px;
+}
+
+@media (min-width: 500px) {
+  .logo {
+    width: 200px;
+    height: 40px;
+  }
+}

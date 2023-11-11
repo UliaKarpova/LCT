@@ -1,0 +1,329 @@
+[
+  {
+    "_id": {
+      "$oid": "65466c0ba80a7a01675ab333"
+    },
+    "name": "Дерягин Никита Владимирович",
+    "address": "Краснодар, Красная, д. 139",
+    "gradeIndex": 1,
+    "nativeBranch": {
+      "address": "Краснодар,Красная, 139",
+      "location": [38.977047, 45.04496]
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "status": 1,
+        "name": "Выезд на точку для стимулирования выдач",
+        "priority": "Hight",
+        "time": 4,
+        "branch": {
+          "address": "Краснодар, Коммунаров, 258",
+          "location": [38.981691, 45.043693]
+        }
+      },
+      {
+        "id": 2,
+        "status": 1,
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "branch": {
+          "address": "Краснодар, Красная, 145",
+          "location": [38.977685, 45.046718]
+        }
+      },
+      {
+        "id": 3,
+        "status": 1,
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "branch": {
+          "address": "Краснодар, 40-летия Победы, 34",
+          "location": [39.003736, 45.054684]
+        }
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65466c0ba80a7a01675ab334"
+    },
+    "name": "Петрошев Валерий Павлович",
+    "address": "Краснодар, Красная, д. 139",
+    "gradeIndex": 2,
+    "tasks": [
+      {
+        "status": "done",
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "address": "ул. им. Володи Головатого, д. 313"
+      },
+      {
+        "status": "processing",
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "address": "ул. Российская, д. 418"
+      },
+      {
+        "status": "waiting",
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "address": "ул. Северная, д. 326"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. им. Атарбекова, д. 24"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65466c0ba80a7a01675ab335"
+    },
+    "name": "Евдокимов Давид Тихонович",
+    "address": "Краснодар, Красная, д. 139",
+    "gradeIndex": 3,
+    "tasks": [
+      {
+        "status": "processing",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. Уральская, д. 79/1"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. Уральская, д. 117"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. им. Тургенева, д. 174, 1 этаж"
+      },
+      {
+        "status": "done",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "х. Ленина, п/о. 37"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. Ставропольская, д. 140"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65466c0ba80a7a01675ab336"
+    },
+    "name": "Андреев Гордий Данилович",
+    "address": "Краснодар, В.Н. Мачуги, 41",
+    "gradeIndex": 1,
+    "tasks": [
+      {
+        "status": "done",
+        "name": "Выезд на точку для стимулирования выдач",
+        "priority": "Hight",
+        "time": 4,
+        "address": "тер. Пашковский жилой массив, ул. Крылатая, д. 2"
+      },
+      {
+        "status": "processing",
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "address": "ул. им. Максима Горького, д. 128"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. им. Дзержинского, д. 100"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65466c0ba80a7a01675ab337"
+    },
+    "name": "Иванов Адам Федорович",
+    "address": "Краснодар, В.Н. Мачуги, 41",
+    "gradeIndex": 2,
+    "tasks": [
+      {
+        "status": "done",
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "address": "ул. им. Володи Головатого, д. 313"
+      },
+      {
+        "status": "processing",
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "address": "ул. Российская, д. 418"
+      },
+      {
+        "status": "waiting",
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "address": "ул. Северная, д. 326"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. им. Атарбекова, д. 24"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65466c0ba80a7a01675ab338"
+    },
+    "name": "Бобылёв Ипполит Альбертович",
+    "address": "Краснодар, В.Н. Мачуги, 41",
+    "gradeIndex": 3,
+    "tasks": [
+      {
+        "status": "done",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. Уральская, д. 79/1"
+      },
+      {
+        "status": "done",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. Уральская, д. 117"
+      },
+      {
+        "status": "processing",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. им. Тургенева, д. 174, 1 этаж"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "х. Ленина, п/о. 37"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. Ставропольская, д. 140"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65466c0ba80a7a01675ab339"
+    },
+    "name": "Беляева Евгения Антоновна",
+    "address": "Краснодар, Красных Партизан, 321",
+    "gradeIndex": 2,
+    "tasks": [
+      {
+        "status": "processing",
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "address": "ул. им. Володи Головатого, д. 313"
+      },
+      {
+        "status": "waiting",
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "address": "ул. Российская, д. 418"
+      },
+      {
+        "status": "done",
+        "name": "Обучение агента",
+        "priority": "Medium",
+        "time": 2,
+        "address": "ул. Северная, д. 326"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. им. Атарбекова, д. 24"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65466c0ba80a7a01675ab33a"
+    },
+    "name": "Николаев Азарий Платонович",
+    "address": "Краснодар, Красных Партизан, 321",
+    "gradeIndex": 3,
+    "tasks": [
+      {
+        "status": "processing",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. Уральская, д. 79/1"
+      },
+      {
+        "status": "done",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. Уральская, д. 117"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. им. Тургенева, д. 174, 1 этаж"
+      },
+      {
+        "status": "done",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "х. Ленина, п/о. 37"
+      },
+      {
+        "status": "waiting",
+        "name": "Доставка карт и материалов",
+        "priority": "Low",
+        "time": 1.5,
+        "address": "ул. Ставропольская, д. 140"
+      }
+    ]
+  }
+]

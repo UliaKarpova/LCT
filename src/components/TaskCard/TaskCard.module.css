@@ -4,6 +4,7 @@
     border-bottom: 1px solid #E6E8EA;
     background: #FFF;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 3px 15px 0 rgba(11, 15, 20, 0.12);
+    cursor: pointer;
 }
 
 .info {
@@ -21,7 +22,6 @@
 .rightArrow {
     background: transparent;
     border: none;
-    cursor: pointer;
     align-self: start;
 }
 
@@ -75,4 +75,9 @@
 
 .status {
     height: 24px;
+}
+
+.statusWrapper {
+    display: flex;
+    align-items: center;
 }

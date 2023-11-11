@@ -2,7 +2,7 @@ import styles from './TaskCard.module.css'
 import ArrowRight from '../../assets/images/icons/Arrow_right.svg?react'
 import Location from '../../assets/images/icons/Location.svg?react'
 import Alert from '../../assets/images/icons/Ellipse-Allert.svg?react'
-import Processing from '../../images/processing.png'
+import Waiting from '../../images/processing.png'
 import InWork from '../../images/inWork.png'
 import Done from '../../images/done.png'
 import classnames from "classnames";
@@ -14,19 +14,22 @@ const priorities = {
 }
 
 const status = {
-    done: Done,
-    processing: InWork,
-    waiting: Processing
+    1: Waiting,
+    2: Waiting,
+    3: InWork,
+    4: Done
 }
 
-const TaskCard = ({number, task}) => {
+const TaskCard = ({number, task, onClick}) => {
     const priorityClassname = classnames({
         [styles.priority]: true,
         [styles[task.priority]]: true
     })
 
+    console.log(task)
+
     return (
-        <div className={styles.card}>
+        <div className={styles.card} onClick={onClick}>
             <div className={styles.info}>
                 <span>{`${number}.`}</span>
                 <div>
@@ -43,7 +46,7 @@ const TaskCard = ({number, task}) => {
                     <Alert/>
                     <span>{`Приоритет ${priorities[task.priority]}`}</span>
                 </div>
-                <span><img className={styles.status} src={status[task.status]} alt='Статус.'/></span>
+                <span className={styles.statusWrapper}><img className={styles.status} src={status[task.status]} alt='Статус.'/></span>
             </div>
         </div>
     );

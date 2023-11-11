@@ -6,7 +6,7 @@ const InputField = forwardRef(
   (props, ref) => {
     const { labelId = "", forPassword = false,  hasError, errorMessage, disabled, ...rest } = props;
 
-    const [isInvisible, setIsInvisible] = useState(false)
+    const [isVisible, setVisible] = useState(false)
 
     const inputClassName = classnames({
       [styles.input]: true,
@@ -20,13 +20,13 @@ const InputField = forwardRef(
           {...(labelId && { id: labelId })}
           className={inputClassName}
           ref={ref}
-          type={isInvisible ? 'password' : 'text'}
+          type={!isVisible ? 'password' : 'text'}
           {...rest}
         />
         {errorMessage && (
           <div className={styles.errorMessage}>{errorMessage}</div>
         )}
-        {forPassword && <button type='button' onClick={() => setIsInvisible(!isInvisible)} className={styles.eyeButton}></button>}
+        {forPassword && <button type='button' onClick={() => setVisible(!isVisible)} className={styles.eyeButton}></button>}
       </div>
     );
   },

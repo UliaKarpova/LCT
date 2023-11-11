@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react'
-import Auth from './components/Auth/Auth'
+import Auth from './Pages/Auth/Auth'
 import WorkersList from './components/WorkersList/WorkersList'
 import WorkerProfile from "./Pages/WorkerProfile/WorkerProfile.jsx";
 import {AppContext} from "./context/index.js";

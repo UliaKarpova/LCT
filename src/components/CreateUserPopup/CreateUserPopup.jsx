@@ -58,7 +58,7 @@ const CreateUserPopup = ({closeModal}) => {
                             {...register("password", {
                                 required: 'Поле обязательно',
                                 minLength: {
-                                    value: 3,
+                                    value: 8,
                                     message: 'Минимум 8 символов'
                                 }
                             })}

@@ -19,6 +19,7 @@ const CreateOfficePopup = ({closeModal}) => {
             const res = await getCoordinates(data.address)
             const postBody = {...data, coordinates: res};
             console.log(postBody)
+            closeModal()
             reset()
         }
         catch (err) {

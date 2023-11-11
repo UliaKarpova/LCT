@@ -39,6 +39,18 @@ class Api {
             return res;
         });
     }
+
+    login = (data) => {
+        return fetch(`${this._url}/login`, {
+            method: 'POST',
+            headers: this._headers,
+            body: JSON.stringify(data)
+        }).then(this._getResponseData);
+    }
+
+    getUser = id => {
+        return fetch(`${this._url}/users/${id}`).then(this._getResponseData);
+    }
 }
 const api = new Api({
     url: 'http://94.139.254.101:8010',

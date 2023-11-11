@@ -3,13 +3,17 @@ import allert from '../../images/allert.svg'
 import Button from "../../components/ui/Button/Button.jsx";
 import Input from "../../components/ui/Input/Input.jsx";
 import './Auth.css'
-import CreateUserPopup from "../../components/CreateUserPopup/CreateUserPopup.jsx";
-import {useState} from "react";
 import {useForm} from "react-hook-form";
-import CreateOfficePopup from "../../components/CreateOfficePopup/CreateOfficePopup.jsx";
+import api from "../../utils/api.js";
+import {useContext, useEffect} from "react";
+import {AppContext} from "../../context/index.js";
+import {useNavigate} from "react-router-dom";
+import {setCookie} from "../../utils/helpers.js";
 
 function Auth() {
-    const [isPopupVisible, setIsPopupVisible] =useState(false)
+    const navigate = useNavigate()
+
+    const {user, setUser} = useContext(AppContext)
 
     const {
         register,
@@ -18,10 +22,24 @@ function Auth() {
         reset
     } = useForm({ mode: "onChange" });
 
-    const onSubmit = (data) => {
-        console.log(data)
-        reset()
+    const onSubmit = async (data) => {
+        try {
+            const res = await api.login(data)
+            const user = await res.json()
+            await setUser(user)
+            setCookie("userId", user.role === 'worker' ? user._id : 'admin')
+            reset()
+        }
+        catch (err) {
+            console.log(`Произошла ошибка: ${err}`)
+        }
     }
+
+    useEffect(() => {
+        if (user) {
+            navigate(user.role === 'worker' ? 'worker' : 'manager/workers')
+        }
+    }, [user, navigate]);
 
   return (
       <>
@@ -30,10 +48,10 @@ function Auth() {
                    src={logo}
                    alt='Логотип Совкомбанка' />
               <h1 className='title'>Авторизация</h1>
-              <form className='form'>
+              <form className='form' onSubmit={handleSubmit(onSubmit)}>
                   <Input
                       placeholder='Логин'
-                      {...register("login", {
+                      {...register("username", {
                           required: 'Поле обязательно',
                           minLength: {
                               value: 3,
@@ -64,10 +82,9 @@ function Auth() {
             Для регистрации в приложении<br />обратитесь к менеджеру
           </span>
                   </div>
-                  <Button type='button' className='bottom' onClick={() => setIsPopupVisible(true)}>Войти</Button>
+                  <Button type='submit' className='bottom'>Войти</Button>
               </form>
           </div>
-          {isPopupVisible && <CreateOfficePopup closeModal={() => setIsPopupVisible(false)}/>}
       </>
   )
 }

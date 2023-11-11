@@ -11,18 +11,15 @@ import TaskPopup from "../../components/TaskPopup/TaskPopup.jsx";
 const WorkerProfile = () => {
     const [isVisibleMap, setIsVisibleMap] = useState(false)
     const [detailedTask, setDetailedTask] = useState(null)
-    const { user, setUser, dailyTasks, setDailyTasks } = useContext(AppContext)
+    const { user, dailyTasks, setDailyTasks } = useContext(AppContext)
 
         useEffect(() => {
-        setUser(users[0])
         if (!dailyTasks) {
             setDailyTasks(users[0].tasks)
         }
     });
 
     const nextTask = dailyTasks?.find(task => task.status !== 4);
-
-    console.log('next', nextTask)
 
     return (
         <div className={styles.container}>

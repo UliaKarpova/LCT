@@ -6,7 +6,6 @@
   max-width: 1280px;
 } */
 
-
 .grade_select {
   width: 160px;
   height: 44px;
@@ -14,10 +13,9 @@
   align-items: center;
   flex-shrink: 0;
   border-radius: 10px;
-  border: 1px solid var(--border-neutral-200, #D5D8DD);
-  background: var(--background-white, #FFF);
+  border: 1px solid var(--border-neutral-200, #d5d8dd);
+  background: var(--background-white, #fff);
 }
-
 
 .workers_list {
   list-style: none;

@@ -1,45 +1,38 @@
-[{
-  "_id": {
-    "$oid": "65466c1fa80a7a01675ab33d"
+[
+  {
+    "_id": {
+      "$oid": "65466c1fa80a7a01675ab33d"
+    },
+    "type": 1,
+    "title": "Выезд на точку для стимулирования выдач",
+    "priority": "hight",
+    "time": 4,
+    "condition1": "daysCount > 7 && applicationsNumber > 0",
+    "condition2": "daysCount > 14",
+    "gradeIndex": [1]
   },
-  "type": 1,
-  "title": "Выезд на точку для стимулирования выдач",
-  "priority": "hight",
-  "time": 4,
-  "condition1": "daysCount > 7 && applicationsNumber > 0",
-  "condition2": "daysCount > 14",
-  "gradeIndex": [
-    1
-  ]
-},
-{
-  "_id": {
-    "$oid": "65466c1fa80a7a01675ab33e"
+  {
+    "_id": {
+      "$oid": "65466c1fa80a7a01675ab33e"
+    },
+    "type": 2,
+    "title": "Обучение агента",
+    "priority": "medium",
+    "time": 2,
+    "condition1": "issuedСardsNumber > 0 && applicationsNumber / issuedСardsNumber > 2",
+    "condition2": "-",
+    "gradeIndex": [1, 2]
   },
-  "type": 2,
-  "title": "Обучение агента",
-  "priority": "medium",
-  "time": 2,
-  "condition1": "issuedСardsNumber > 0 && applicationsNumber / issuedСardsNumber > 2",
-  "condition2": "-",
-  "gradeIndex": [
-    1,
-    2
-  ]
-},
-{
-  "_id": {
-    "$oid": "65466c1fa80a7a01675ab33f"
-  },
-  "type": 3,
-  "title": "Доставка карт и материалов",
-  "priority": "low",
-  "time": 1.5,
-  "condition1": "isOld === false",
-  "condition2": "isDelivered === false",
-  "gradeIndex": [
-    1,
-    2,
-    3
-  ]
-}]
+  {
+    "_id": {
+      "$oid": "65466c1fa80a7a01675ab33f"
+    },
+    "type": 3,
+    "title": "Доставка карт и материалов",
+    "priority": "low",
+    "time": 1.5,
+    "condition1": "isOld === false",
+    "condition2": "isDelivered === false",
+    "gradeIndex": [1, 2, 3]
+  }
+]

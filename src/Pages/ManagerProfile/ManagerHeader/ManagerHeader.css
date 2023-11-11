@@ -29,7 +29,7 @@
 
 .menu_link {
   text-decoration: none;
-  color: var(--text-primary, #0B0F14);
+  color: var(--text-primary, #0b0f14);
   /* font-feature-settings: 'clig'off, 'liga'off; */
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -43,7 +43,7 @@
 
 .active {
   color: var(--text-secondary-accent, #003791);
-  background: var(--button-background-secondary-static, #EEEFF1);
+  background: var(--button-background-secondary-static, #eeeff1);
 }
 
 .user {
@@ -84,7 +84,7 @@
 }
 
 .user_role {
-  color: #5A6E85;
+  color: #5a6e85;
   /* font-feature-settings: 'clig'off, 'liga'off; */
   font-family: Inter, sans-serif;
   font-size: 14px;

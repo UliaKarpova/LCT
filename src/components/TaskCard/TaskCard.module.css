@@ -1,83 +1,85 @@
 .card {
-    width: 100%;
-    border-radius: 12px;
-    border-bottom: 1px solid #E6E8EA;
-    background: #FFF;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 3px 15px 0 rgba(11, 15, 20, 0.12);
-    cursor: pointer;
+  width: 100%;
+  border-radius: 12px;
+  border-bottom: 1px solid #e6e8ea;
+  background: #fff;
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.08),
+    0 3px 15px 0 rgba(11, 15, 20, 0.12);
+  cursor: pointer;
 }
 
 .info {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 135%;
-    gap: 8px;
-    padding: 12px;
-    border-bottom: 1px solid #E6E8EA;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 1px solid #e6e8ea;
 }
 
 .rightArrow {
-    background: transparent;
-    border: none;
-    align-self: start;
+  background: transparent;
+  border: none;
+  align-self: start;
 }
 
 .location {
-    margin-top: 8px;
-    display: flex;
-    gap: 4px;
+  margin-top: 8px;
+  display: flex;
+  gap: 4px;
 }
 
 .address {
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }
 
 .statuses {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px;
-    width: 100%;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .priority {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-    margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  margin-left: 20px;
 }
 
 .HighPriority * {
-    fill: #F04256;
-    color: #F04256;
+  fill: #f04256;
+  color: #f04256;
 }
 
-.MediumPriority  * {
-    fill: #D74D00;
-    color: #D74D00;
+.MediumPriority * {
+  fill: #d74d00;
+  color: #d74d00;
 }
 
-.LowPriority  * {
-    fill: #5AA300;
-    color: #5AA300;
+.LowPriority * {
+  fill: #5aa300;
+  color: #5aa300;
 }
 
 .status {
-    height: 24px;
+  height: 24px;
 }
 
 .statusWrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }

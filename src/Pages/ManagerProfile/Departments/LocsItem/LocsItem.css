@@ -6,12 +6,12 @@
   justify-content: space-between;
   align-items: center;
   text-align: start;
-  border-top: 1px solid var(--border-neutral-150, #E6E8EA);
+  border-top: 1px solid var(--border-neutral-150, #e6e8ea);
   position: relative;
 }
 
 .cell {
-  color: var(--text-primary, #0B0F14);
+  color: var(--text-primary, #0b0f14);
   /* font-feature-settings: 'clig' off, 'liga' off; */
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -27,5 +27,5 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  content: '';
+  content: "";
 }

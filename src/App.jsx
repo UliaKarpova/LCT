@@ -49,7 +49,7 @@ function App() {
               ?  <main className='app'>
               <Routes>
                 <Route path="/" element={<Auth />} />
-                <Route element={<ProtectedRoute role='manager'/>}>
+                <Route element={<ProtectedRoute role='admin'/>}>
                   <Route path="manager/workers" element={<Manager />} />
                   <Route path="manager/departments" element={<Manager />} />
                   <Route path="manager/monitoring" element={<Manager />} />
@@ -57,6 +57,7 @@ function App() {
                 <Route element={<ProtectedRoute role='worker'/>}>
                   <Route path="worker" element={<WorkerProfile />} />
                 </Route>
+                <Route path="*" element={<Auth />} />
               </Routes>
             </main>
               :  <ClipLoader

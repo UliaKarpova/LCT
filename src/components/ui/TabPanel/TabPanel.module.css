@@ -1,9 +1,9 @@
 .panel {
-    height: 36px;
-    width: 352px;
-    display: flex;
-    padding: 2px;
-    background-color: #EEEFF1;
-    justify-content: space-between;
-    border-radius: 6px;
+  height: 36px;
+  width: 352px;
+  display: flex;
+  padding: 2px;
+  background-color: #eeeff1;
+  justify-content: space-between;
+  border-radius: 6px;
 }

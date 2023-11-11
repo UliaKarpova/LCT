@@ -1,13 +1,8 @@
 import classnames from "classnames";
 import styles from "./Button.module.css";
 
-
 const Button = (props) => {
-  const {
-    className = "",
-    children,
-    ...rest
-  } = props;
+  const { className = "", children, ...rest } = props;
 
   const buttonClass = classnames({
     [className]: true,
@@ -15,11 +10,7 @@ const Button = (props) => {
   });
 
   return (
-    <button
-      type="button"
-      className={buttonClass}
-      {...rest}
-    >
+    <button type="button" className={buttonClass} {...rest}>
       {children}
     </button>
   );

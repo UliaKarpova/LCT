@@ -1,98 +1,96 @@
+.dep_header {
+  display: flex;
+  padding: var(--spacing-xs, 16px);
+  align-items: flex-start;
+  gap: var(--spacing-xs, 16px);
+  height: 56ppx;
+}
+.dep_number {
+  color: var(--text-primary, #101010);
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 20px */
+  letter-spacing: -0.2px;
+  width: 64px;
+}
+.dep_info {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 6px;
+  margin-right: auto;
+}
+.dep_address {
+  color: var(--text-primary, #101010);
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 20px */
+  letter-spacing: -0.2px;
+}
+.dep_status {
+  height: 24px;
+  width: 260px;
+  margin-top: 12px;
+}
+.dep_list {
+  width: 100%;
+}
 
-   .dep_header {
-    display: flex;
-    padding: var(--spacing-xs, 16px);
-    align-items: flex-start;
-    gap: var(--spacing-xs, 16px);
-    height: 56ppx;
-   }
-  .dep_number {
-    color: var(--text-primary, #101010);
-    /* font-feature-settings: 'clig' off, 'liga' off; */
-    font-family: Inter, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%; /* 20px */
-    letter-spacing: -0.2px;
-    width: 64px;
-  }
-  .dep_info {
-    display: flex;
-    flex-direction: column;
-    padding: 4px 6px;
-    margin-right: auto;
-  }
-  .dep_address {
-    color: var(--text-primary, #101010);
-    /* font-feature-settings: 'clig' off, 'liga' off; */
-    font-family: Inter, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%; /* 20px */
-    letter-spacing: -0.2px;
-  }
-  .dep_status {
-    height: 24px;
-    width: 260px;
-    margin-top: 12px;
-  }
-  .dep_list {
-    width: 100%;
-  }
+.table_hd {
+  width: 100%;
+}
+.table_row {
+  display: grid;
+  padding: 12px 16px 12px 96px;
+  grid-template-columns: 1fr 1fr 110px;
+  border-top: 1px solid var(--border-neutral-150, #e6e8ea);
+}
 
-  .table_hd {
+.table_th {
+  color: var(--text-tertiary, #697481);
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+}
 
-    width: 100%;
-  }
-  .table_row {
-    display: grid;
-    padding: 12px 16px 12px 96px;
-    grid-template-columns: 1fr 1fr 110px;
-    border-top: 1px solid var(--border-neutral-150, #E6E8EA);
-  }
+.dep_row {
+  display: grid;
+  padding: 12px 16px 12px 96px;
+  grid-template-columns: 1fr 1fr 110px;
+  border-top: 1px solid var(--border-neutral-150, #e6e8ea);
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  border-top: 1px solid var(--border-neutral-150, #e6e8ea);
+  position: relative;
+}
+.dep_cell {
+  color: var(--text-primary, #0b0f14);
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  display: flex;
+  align-items: center;
+}
 
-  .table_th {
-    color: var(--text-tertiary, #697481);
-    /* font-feature-settings: 'clig' off, 'liga' off; */
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px; /* 114.286% */
-  }
+.dep_cell_img {
+  height: 24px;
+  max-width: 110px;
+}
 
-  .dep_row {
-    display: grid;
-    padding: 12px 16px 12px 96px;
-    grid-template-columns: 1fr 1fr 110px;
-    border-top: 1px solid var(--border-neutral-150, #E6E8EA);
-    justify-content: space-between;
-    align-items: center;
-    text-align: start;
-    border-top: 1px solid var(--border-neutral-150, #E6E8EA);
-    position: relative;
-  }
-  .dep_cell {
-    color: var(--text-primary, #0B0F14);
-    /* font-feature-settings: 'clig' off, 'liga' off; */
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 150% */
-    display: flex;
-    align-items: center;
-  }
-
-  .dep_cell_img {
-    height: 24px;
-    max-width: 110px;
-  }
-
-  .dep_avatar {
-    height: 20px;
-    width: 20px;
-    margin-right: 8px;
-  }
+.dep_avatar {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+}

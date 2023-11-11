@@ -1,81 +1,79 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {useEffect, useState} from 'react';
-import Auth from './Pages/Auth/Auth';
-import Manager from './Pages/ManagerProfile/Manager';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Auth from "./Pages/Auth/Auth";
+import Manager from "./Pages/ManagerProfile/Manager";
 import WorkerProfile from "./Pages/WorkerProfile/WorkerProfile.jsx";
-import {AppContext} from "./context/index.js";
-import {createUserObject, getCookie} from "./utils/helpers.js";
+import { AppContext } from "./context/index.js";
+import { createUserObject, getCookie } from "./utils/helpers.js";
 import api from "./utils/api.js";
 import ClipLoader from "react-spinners/ClipLoader";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
 
 function App() {
   const [user, setUser] = useState(null);
-  const [dailyTasks, setDailyTasks] = useState(null)
+  const [dailyTasks, setDailyTasks] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const userId = getCookie('userId');
+    const userId = getCookie("userId");
     const setLoginUser = async () => {
       if (userId) {
         try {
-          if (userId === 'admin') {
+          if (userId === "admin") {
             setUser({
-              "role": "admin",
-              "username": "admin"
-            })
+              role: "admin",
+              username: "admin",
+            });
           } else {
-            setIsLoading(true)
+            setIsLoading(true);
             const res = await api.getUser(userId);
             const loginUser = await res.json();
-            if (loginUser.role === 'worker') {
-              await setUser(createUserObject(loginUser))
+            if (loginUser.role === "worker") {
+              await setUser(createUserObject(loginUser));
             } else {
-              setUser(loginUser)
+              setUser(loginUser);
             }
           }
         } catch (err) {
-          console.log(`Произошла ошибка: ${err}`)
+          console.log(`Произошла ошибка: ${err}`);
         } finally {
-          setIsLoading(false)
+          setIsLoading(false);
         }
       }
-    }
-    setLoginUser()
-
+    };
+    setLoginUser();
   }, []);
 
-
   return (
-      <AppContext.Provider value={{user, setUser, dailyTasks, setDailyTasks}}>
-        <BrowserRouter>
-          { !isLoading
-              ?  <main className='app'>
-              <Routes>
-                <Route path="/" element={<Auth />} />
-                <Route element={<ProtectedRoute role='admin'/>}>
-                  <Route path="manager/workers" element={<Manager />} />
-                  <Route path="manager/departments" element={<Manager />} />
-                  <Route path="manager/monitoring" element={<Manager />} />
-                </Route>
-                <Route element={<ProtectedRoute role='worker'/>}>
-                  <Route path="worker" element={<WorkerProfile />} />
-                </Route>
-                <Route path="*" element={<Auth />} />
-              </Routes>
-            </main>
-              :  <ClipLoader
-                  color='#FF4B5F'
-                  loading={isLoading}
-                  size={300}
-                  aria-label="Loading Spinner"
-                  data-testid="loader"
-              />
-
-          }
-        </BrowserRouter>
-      </AppContext.Provider>
-  )
+    <AppContext.Provider value={{ user, setUser, dailyTasks, setDailyTasks }}>
+      <BrowserRouter>
+        {!isLoading ? (
+          <main className="app">
+            <Routes>
+              <Route path="/" element={<Auth />} />
+              <Route element={<ProtectedRoute role="admin" />}>
+                <Route path="manager/workers" element={<Manager />} />
+                <Route path="manager/departments" element={<Manager />} />
+                <Route path="manager/monitoring" element={<Manager />} />
+              </Route>
+              <Route element={<ProtectedRoute role="worker" />}>
+                <Route path="worker" element={<WorkerProfile />} />
+              </Route>
+              <Route path="*" element={<Auth />} />
+            </Routes>
+          </main>
+        ) : (
+          <ClipLoader
+            color="#FF4B5F"
+            loading={isLoading}
+            size={300}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        )}
+      </BrowserRouter>
+    </AppContext.Provider>
+  );
 }
 
-export default App
+export default App;

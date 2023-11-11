@@ -9,7 +9,9 @@
 .title {
   color: #000;
   /* font-feature-settings: 'clig'off, 'liga'off; */
-  font-family: SF Pro, sans-serif;
+  font-family:
+    SF Pro,
+    sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 590;
@@ -34,12 +36,12 @@
   align-items: flex-start;
   flex: 1 0 0;
   border-radius: 10px;
-  border: 1px solid var(--border-neutral-200, #D5D8DD);
-  background: var(--background-white, #FFF);
+  border: 1px solid var(--border-neutral-200, #d5d8dd);
+  background: var(--background-white, #fff);
 }
 
 .panel_finder::placeholder {
-  color: var(--text-primary, #0B0F14);
+  color: var(--text-primary, #0b0f14);
   font-family: Inter, sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -64,7 +66,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background: var(--button-background-secondary-static, #EEEFF1);
+  background: var(--button-background-secondary-static, #eeeff1);
   color: var(--text-secondary-accent, #003791);
   font-family: Inter, sans-serif;
   font-size: 16px;

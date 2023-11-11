@@ -1,14 +1,12 @@
-import './Manager.css'
-import { useLocation } from 'react-router-dom';
-import ManagerHeader from './ManagerHeader/ManagerHeader';
-import WorkersList from './WorkersList/WorkersList'
-import Departments from './Departments/Departments';
-import Monitoring from './Monitoring/Monitoring'
-
+import "./Manager.css";
+import { useLocation } from "react-router-dom";
+import ManagerHeader from "./ManagerHeader/ManagerHeader";
+import WorkersList from "./WorkersList/WorkersList";
+import Departments from "./Departments/Departments";
+import Monitoring from "./Monitoring/Monitoring";
 
 function Manager() {
   const { pathname } = useLocation();
-
 
   const activeComponent = () => {
     switch (pathname) {
@@ -16,8 +14,8 @@ function Manager() {
         return <WorkersList />;
       case "/manager/departments":
         return <Departments />;
-        case "/manager/monitoring":
-          return <Monitoring />;
+      case "/manager/monitoring":
+        return <Monitoring />;
       default:
         return "";
     }
@@ -27,8 +25,7 @@ function Manager() {
       <ManagerHeader path={pathname} />
       {activeComponent()}
     </>
-
-  )
+  );
 }
 
-export default Manager
+export default Manager;

@@ -10,7 +10,7 @@
 
 .task_title {
   width: 400px;
-  color: var(--text-primary, #0B0F14);
+  color: var(--text-primary, #0b0f14);
   /* font-feature-settings: 'clig' off, 'liga' off; */
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -30,7 +30,7 @@
 }
 .task_priority {
   width: 45px;
-  color: var(--text-primary, #0B0F14);
+  color: var(--text-primary, #0b0f14);
   /* font-feature-settings: 'clig' off, 'liga' off; */
   font-family: Inter, sans-serif;
   font-size: 14px;
